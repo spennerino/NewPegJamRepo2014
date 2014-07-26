@@ -5,10 +5,9 @@ public class DudeController : MonoBehaviour
 {
 	public bool Dead = false;
 
-<<<<<<< HEAD
 	public float 	Speed = 		400;
 	public float 	TopSpeed = 		750;
-	public float	SprintSpeed =	800;
+	public float	SprintSpeed =	1000;
 
 	private float 	MaximumSprint =		100;
 	public float 	AvailableSprint = 	100;
@@ -20,15 +19,6 @@ public class DudeController : MonoBehaviour
     public string horizontalAxis;
     public string verticalAxis;
 	public string sprintButton;
-
-=======
-	public float Speed = 400;
-	public float TopSpeed = 750;
-
-	private GameObject bloodSpray;
-	public string horizontalAxis;
-	public string verticalAxis;
->>>>>>> 2ed7be6dbc79b74d3443912deb1e46e46c0ea69a
 
 	// Use this for initialization
 	void Start()
@@ -42,13 +32,8 @@ public class DudeController : MonoBehaviour
 	{
 		if (!Dead)
 		{
-<<<<<<< HEAD
             float horizontal = 	Input.GetAxis(horizontalAxis);
             float vertical = 	Input.GetAxis(verticalAxis);
-=======
-			float horizontal = Input.GetAxis(horizontalAxis);
-			float vertical = Input.GetAxis(verticalAxis);
->>>>>>> 2ed7be6dbc79b74d3443912deb1e46e46c0ea69a
 
 			Vector3 force = new Vector3(horizontal, 0, vertical);
 

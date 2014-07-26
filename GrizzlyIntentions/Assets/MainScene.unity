@@ -339,8 +339,11 @@ MonoBehaviour:
   Dead: 0
   Speed: 750
   TopSpeed: 1250
+  SprintSpeed: 800
+  AvailableSprint: 100
   horizontalAxis: Horizontal - Player 2
   verticalAxis: Vertical - Player 2
+  sprintButton: 
 --- !u!54 &141554736
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2346,8 +2349,11 @@ MonoBehaviour:
   Dead: 0
   Speed: 750
   TopSpeed: 1250
+  SprintSpeed: 800
+  AvailableSprint: 100
   horizontalAxis: Horizontal - Player 1
   verticalAxis: Vertical - Player 1
+  sprintButton: Sprint - Player 1
 --- !u!54 &492016952
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2675,6 +2681,45 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1155560335}
   m_GameObject: {fileID: 587420710}
   m_Mesh: {fileID: 4300002, guid: 72c9939485173834593439ca572c867b, type: 3}
+--- !u!1 &601277641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 601277643}
+  - 114: {fileID: 601277642}
+  m_Layer: 0
+  m_Name: GUIContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &601277642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 601277641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 448fa68ec43683e4ba7b9c1ab13ca5ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &601277643
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 601277641}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!1 &616810050
 GameObject:
   m_ObjectHideFlags: 0
@@ -2782,8 +2827,11 @@ MonoBehaviour:
   Dead: 0
   Speed: 750
   TopSpeed: 1250
+  SprintSpeed: 800
+  AvailableSprint: 100
   horizontalAxis: Horizontal - Player 3
   verticalAxis: Vertical - Player 3
+  sprintButton: 
 --- !u!54 &638140337
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3137,6 +3185,10 @@ Prefab:
     - target: {fileID: 100022, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
       propertyPath: m_Name
       value: Dude 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: sprintButton
+      value: Sprint - Player 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
@@ -7028,8 +7080,11 @@ MonoBehaviour:
   Dead: 0
   Speed: 750
   TopSpeed: 1250
+  SprintSpeed: 800
+  AvailableSprint: 100
   horizontalAxis: Horizontal - Player 4
   verticalAxis: Vertical - Player 4
+  sprintButton: 
 --- !u!54 &1398342004
 Rigidbody:
   m_ObjectHideFlags: 0
