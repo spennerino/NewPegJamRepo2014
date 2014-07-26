@@ -20,7 +20,8 @@ public class DudeController : MonoBehaviour
 			float vertical = Input.GetAxis("Vertical");
 
 			Vector3 force = new Vector3(horizontal, 0, vertical);
-			rigidbody.AddForce(force * Speed * Time.deltaTime);
+
+			rigidbody.AddForce(force.normalized * Speed * Time.deltaTime);
 
 			if (rigidbody.velocity.magnitude > TopSpeed)
 			{
