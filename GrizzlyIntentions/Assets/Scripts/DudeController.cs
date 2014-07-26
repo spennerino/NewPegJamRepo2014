@@ -5,19 +5,19 @@ public class DudeController : MonoBehaviour
 {
 	public bool Dead = false;
 
-	public float 	Speed = 		400;
-	public float 	TopSpeed = 		750;
-	public float	SprintSpeed =	1000;
+	public float Speed = 400;
+	public float TopSpeed = 750;
+	public float SprintSpeed = 1000;
 
-	private float 	MaximumSprint =		100;
-	public float 	AvailableSprint = 	100;
-	private float	SprintRegenSpeed = 	0.025f;
-	private bool	isSprinting = 		false;
+	private float MaximumSprint = 100;
+	public float AvailableSprint = 100;
+	private float SprintRegenSpeed = 0.025f;
+	private bool isSprinting = false;
 
-    private GameObject bloodSpray;
+	private GameObject bloodSpray;
 
-    public string horizontalAxis;
-    public string verticalAxis;
+	public string horizontalAxis;
+	public string verticalAxis;
 	public string sprintButton;
 
 	// Use this for initialization
@@ -32,14 +32,14 @@ public class DudeController : MonoBehaviour
 	{
 		if (!Dead)
 		{
-            float horizontal = 	Input.GetAxis(horizontalAxis);
-            float vertical = 	Input.GetAxis(verticalAxis);
+			float horizontal = Input.GetAxis(horizontalAxis);
+			float vertical = Input.GetAxis(verticalAxis);
 
 			Vector3 force = new Vector3(horizontal, 0, vertical);
 
 
 
-			if( !System.String.IsNullOrEmpty(sprintButton) )
+			if (!System.String.IsNullOrEmpty(sprintButton))
 			{
 				if (Input.GetButton(sprintButton) && AvailableSprint > 0 && rigidbody.velocity.magnitude < SprintSpeed)
 				{
@@ -53,9 +53,9 @@ public class DudeController : MonoBehaviour
 					AvailableSprint--;
 					isSprinting = true;
 				}
-				else 
+				else
 				{
-					if(AvailableSprint < MaximumSprint)
+					if (AvailableSprint < MaximumSprint)
 					{
 						AvailableSprint += SprintRegenSpeed;
 					}
@@ -63,7 +63,7 @@ public class DudeController : MonoBehaviour
 				}
 			}
 
-			if(!isSprinting)
+			if (!isSprinting)
 			{
 				rigidbody.AddForce(force.normalized * Speed * Time.deltaTime);
 
