@@ -4,12 +4,12 @@ using System.Collections.Generic;
 
 public class BearChase : MonoBehaviour
 {
-	private const int MAXPLAYERS = 4;
+	private const int MAXPLAYERS = 		4;
+	private const string PLAYERPREFIX = "Dude";
 
-    public Transform victim;
+	private List<GameObject> 	availableVictims;
+	public  Transform 			currentVictim;
 
-	private List<GameObject> availableVictims;
-	private Transform currentVictim;
 	private NavMeshAgent agent;
 
     // Use this for initialization
@@ -18,7 +18,7 @@ public class BearChase : MonoBehaviour
 		availableVictims = new List<GameObject> ();
 		for(int i = 1; i <= MAXPLAYERS; i++)
 		{
-			GameObject tmpPlayer = GameObject.Find("Dude " + i.ToString());
+			GameObject tmpPlayer = GameObject.Find(PLAYERPREFIX + " " + i.ToString());
 			
 			if(tmpPlayer != null)
 			{
