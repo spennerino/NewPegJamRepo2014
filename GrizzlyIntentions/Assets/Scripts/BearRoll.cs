@@ -18,7 +18,12 @@ public class BearRoll : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
-		transform.Rotate (rotationSpeed, 0, 0, Space.Self);
+		BearChase parentChaser = GameObject.Find ("BearParent").GetComponent<BearChase> ();
+
+		if(parentChaser.currentVictim != null)
+		{
+			transform.Rotate (rotationSpeed, 0, 0, Space.Self);
+		}
 	}
 
 }
