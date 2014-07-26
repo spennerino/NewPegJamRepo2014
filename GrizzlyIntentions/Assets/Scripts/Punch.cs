@@ -20,7 +20,7 @@ public class Punch : MonoBehaviour
         {
             if (Physics.Raycast(frontCheck, out hit, 5))
             {
-                if (hit.collider.tag == "Bear")
+                if (hit.collider.tag == "Player")
                 {
                     hit.rigidbody.AddForce(this.transform.forward * 10000);
                 }
