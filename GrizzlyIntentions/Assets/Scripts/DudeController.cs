@@ -3,9 +3,11 @@ using System.Collections;
 
 public class DudeController : MonoBehaviour
 {
-	private bool Dead = false;
-	public float Speed = 400;
+	public bool Dead = false;
+
+	public float Speed = 	400;
 	public float TopSpeed = 750;
+
     private GameObject bloodSpray;
     public string horizontalAxis;
     public string verticalAxis;
