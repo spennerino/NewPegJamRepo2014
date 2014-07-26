@@ -67,8 +67,10 @@ ModelImporter:
     4300014: polySurface2
     4300016: polySurface3
     4300018: polySurface1
-    7400000: Take 001
+    7400000: Run
+    7400002: Die
     9500000: //RootNode
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -84,7 +86,127 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Run
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 32
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: head_geo
+        weight: 1
+      - path: L_arm_geo
+        weight: 1
+      - path: L_leg_grp
+        weight: 1
+      - path: L_leg_grp/L_foot_geo
+        weight: 1
+      - path: L_leg_grp/L_leg_geo
+        weight: 1
+      - path: L_leg_grp/transform7
+        weight: 1
+      - path: polySurface1
+        weight: 1
+      - path: R_arm_geo
+        weight: 1
+      - path: R_leg_grp
+        weight: 1
+      - path: R_leg_grp/R_foot_geo
+        weight: 1
+      - path: R_leg_grp/R_leg_geo
+        weight: 1
+      - path: R_leg_grp/transform6
+        weight: 1
+      - path: torso_geo
+        weight: 1
+      - path: torso_geo/polySurface2
+        weight: 1
+      - path: torso_geo/polySurface3
+        weight: 1
+      - path: torso_geo/transform5
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Die
+      takeName: Take 001
+      firstFrame: 31
+      lastFrame: 33
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: head_geo
+        weight: 1
+      - path: L_arm_geo
+        weight: 1
+      - path: L_leg_grp
+        weight: 1
+      - path: L_leg_grp/L_foot_geo
+        weight: 1
+      - path: L_leg_grp/L_leg_geo
+        weight: 1
+      - path: L_leg_grp/transform7
+        weight: 1
+      - path: polySurface1
+        weight: 1
+      - path: R_arm_geo
+        weight: 1
+      - path: R_leg_grp
+        weight: 1
+      - path: R_leg_grp/R_foot_geo
+        weight: 1
+      - path: R_leg_grp/R_leg_geo
+        weight: 1
+      - path: R_leg_grp/transform6
+        weight: 1
+      - path: torso_geo
+        weight: 1
+      - path: torso_geo/polySurface2
+        weight: 1
+      - path: torso_geo/polySurface3
+        weight: 1
+      - path: torso_geo/transform5
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -120,6 +242,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   additionalBone: 0
   userData: 
