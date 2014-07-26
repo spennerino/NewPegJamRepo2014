@@ -4,25 +4,32 @@ using System.Collections.Generic;
 
 public class BearChase : MonoBehaviour
 {
-	private List<GameObject> 	availableVictims;
-	public  Transform 			currentVictim;
+	private List<GameObject> availableVictims;
+	public Transform currentVictim;
 
 	private NavMeshAgent agent;
 
-    // Use this for initialization
-    void Start()
-    {
-		availableVictims = PlayerUtil.GetPlayers ();
+	private float roarRate = 5;
+	private float nextRoar = 0;
 
-		agent = GetComponent<NavMeshAgent> ();
+	private float winTimer = 0;
+	private float timeToWin = 100;
 
-		agent.updateRotation =	true;
-		agent.updatePosition = 	true;
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
+	// Use this for initialization
+	void Start()
+	{
+		availableVictims = PlayerUtil.GetPlayers();
+
+		agent = GetComponent<NavMeshAgent>();
+
+		agent.updateRotation = true;
+		agent.updatePosition = true;
+	}
+
+	// Update is called once per frame
+	void Update()
+	{
 		float lastDistance = 0;
 
 		currentVictim = null;
@@ -31,11 +38,11 @@ public class BearChase : MonoBehaviour
 		{
 			DudeController playerController = player.GetComponent<DudeController>();
 
-			if(!playerController.Dead)
+			if (!playerController.Dead)
 			{
 				float currentDistance = Vector3.Distance(transform.position, player.transform.position);
 
-				if(currentDistance < lastDistance || lastDistance == 0)
+				if (currentDistance < lastDistance || lastDistance == 0)
 				{
 					currentVictim = player.transform;
 					lastDistance = currentDistance;
@@ -43,9 +50,24 @@ public class BearChase : MonoBehaviour
 			}
 		}
 
-		if(currentVictim != null)
+		if (currentVictim != null)
 		{
-			agent.SetDestination (currentVictim.position);
+			agent.SetDestination(currentVictim.position);
 		}
-    }
+		else
+		{
+			if (winTimer < timeToWin)
+				winTimer++;
+			else
+				AutoFade.LoadLevel("WinScene", 0.5f, 0.5f, Color.black);
+		}
+
+		if (currentVictim != null && Vector3.Distance(currentVictim.position, transform.position) < 15 && Time.time > nextRoar)
+		{
+			nextRoar = Time.time + roarRate;
+			audio.Play();
+			Debug.Log("Roar");
+		}
+
+	}
 }
