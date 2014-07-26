@@ -5,12 +5,12 @@ public class DudeController : MonoBehaviour
 {
 	public bool Dead = false;
 
-	public float Speed = 	400;
+	public float Speed = 400;
 	public float TopSpeed = 750;
 
-    private GameObject bloodSpray;
-    public string horizontalAxis;
-    public string verticalAxis;
+	private GameObject bloodSpray;
+	public string horizontalAxis;
+	public string verticalAxis;
 
 	// Use this for initialization
 	void Start()
@@ -24,8 +24,8 @@ public class DudeController : MonoBehaviour
 	{
 		if (!Dead)
 		{
-            float horizontal = Input.GetAxis(horizontalAxis);
-            float vertical = Input.GetAxis(verticalAxis);
+			float horizontal = Input.GetAxis(horizontalAxis);
+			float vertical = Input.GetAxis(verticalAxis);
 
 			Vector3 force = new Vector3(horizontal, 0, vertical);
 
@@ -62,6 +62,8 @@ public class DudeController : MonoBehaviour
 				GameObject human = transform.Find("thehuman").gameObject;
 				human.animation.Play("Die");
 				bloodSpray.particleSystem.Play();
+				bloodSpray.audio.Play();
+				audio.Play();
 			}
 		}
 	}
