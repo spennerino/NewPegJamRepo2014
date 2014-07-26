@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\BearChase.cs" />
      <Compile Include="Assets\Scripts\BearKill.cs" />
      <Compile Include="Assets\Scripts\DudeController.cs" />
+     <Compile Include="Assets\Scripts\Punch.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
