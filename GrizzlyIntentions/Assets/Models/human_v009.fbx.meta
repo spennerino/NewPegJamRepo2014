@@ -1,0 +1,247 @@
+fileFormatVersion: 2
+guid: 72c9939485173834593439ca572c867b
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: head_geo
+    100002: //RootNode
+    100004: L_arm_geo
+    100006: L_foot_geo
+    100008: L_leg_geo
+    100010: L_leg_grp
+    100012: polySurface1
+    100014: polySurface2
+    100016: polySurface3
+    100018: R_arm_geo
+    100020: R_foot_geo
+    100022: R_leg_geo
+    100024: R_leg_grp
+    100026: torso_geo
+    100028: transform5
+    100030: transform6
+    100032: transform7
+    400000: head_geo
+    400002: //RootNode
+    400004: L_arm_geo
+    400006: L_foot_geo
+    400008: L_leg_geo
+    400010: L_leg_grp
+    400012: polySurface1
+    400014: polySurface2
+    400016: polySurface3
+    400018: R_arm_geo
+    400020: R_foot_geo
+    400022: R_leg_geo
+    400024: R_leg_grp
+    400026: torso_geo
+    400028: transform5
+    400030: transform6
+    400032: transform7
+    2300000: head_geo
+    2300002: L_arm_geo
+    2300004: L_foot_geo
+    2300006: L_leg_geo
+    2300008: polySurface1
+    2300010: polySurface2
+    2300012: polySurface3
+    2300014: R_arm_geo
+    2300016: R_foot_geo
+    2300018: R_leg_geo
+    3300000: head_geo
+    3300002: L_arm_geo
+    3300004: L_foot_geo
+    3300006: L_leg_geo
+    3300008: polySurface1
+    3300010: polySurface2
+    3300012: polySurface3
+    3300014: R_arm_geo
+    3300016: R_foot_geo
+    3300018: R_leg_geo
+    4300000: R_leg_geo
+    4300002: R_foot_geo
+    4300004: head_geo
+    4300006: R_arm_geo
+    4300008: L_leg_geo
+    4300010: L_foot_geo
+    4300012: L_arm_geo
+    4300014: polySurface2
+    4300016: polySurface3
+    4300018: polySurface1
+    7400000: Run
+    7400002: Die
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Run
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 32
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: head_geo
+        weight: 1
+      - path: L_arm_geo
+        weight: 1
+      - path: L_leg_grp
+        weight: 1
+      - path: L_leg_grp/L_foot_geo
+        weight: 1
+      - path: L_leg_grp/L_leg_geo
+        weight: 1
+      - path: L_leg_grp/transform7
+        weight: 1
+      - path: polySurface1
+        weight: 1
+      - path: R_arm_geo
+        weight: 1
+      - path: R_leg_grp
+        weight: 1
+      - path: R_leg_grp/R_foot_geo
+        weight: 1
+      - path: R_leg_grp/R_leg_geo
+        weight: 1
+      - path: R_leg_grp/transform6
+        weight: 1
+      - path: torso_geo
+        weight: 1
+      - path: torso_geo/polySurface2
+        weight: 1
+      - path: torso_geo/polySurface3
+        weight: 1
+      - path: torso_geo/transform5
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Die
+      takeName: Take 001
+      firstFrame: 31
+      lastFrame: 33
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: head_geo
+        weight: 1
+      - path: L_arm_geo
+        weight: 1
+      - path: L_leg_grp
+        weight: 1
+      - path: L_leg_grp/L_foot_geo
+        weight: 1
+      - path: L_leg_grp/L_leg_geo
+        weight: 1
+      - path: L_leg_grp/transform7
+        weight: 1
+      - path: polySurface1
+        weight: 1
+      - path: R_arm_geo
+        weight: 1
+      - path: R_leg_grp
+        weight: 1
+      - path: R_leg_grp/R_foot_geo
+        weight: 1
+      - path: R_leg_grp/R_leg_geo
+        weight: 1
+      - path: R_leg_grp/transform6
+        weight: 1
+      - path: torso_geo
+        weight: 1
+      - path: torso_geo/polySurface2
+        weight: 1
+      - path: torso_geo/polySurface3
+        weight: 1
+      - path: torso_geo/transform5
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
