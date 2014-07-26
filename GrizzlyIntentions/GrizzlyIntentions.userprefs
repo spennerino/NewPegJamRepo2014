@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DudeController.cs">
+    <Files>
+      <File FileName="Assets\Scripts\BearChase.cs" Line="14" Column="30" />
+      <File FileName="Assets\Scripts\BearRoll.cs" Line="14" Column="45" />
+      <File FileName="Assets\Scripts\DudeController.cs" Line="64" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

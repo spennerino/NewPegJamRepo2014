@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AutoFade.cs" />
      <Compile Include="Assets\Scripts\BearChase.cs" />
+     <Compile Include="Assets\Scripts\BearRoll.cs" />
      <Compile Include="Assets\Scripts\DudeController.cs" />
      <Compile Include="Assets\Scripts\MenuController.cs" />
      <Compile Include="Assets\Scripts\Punch.cs" />
