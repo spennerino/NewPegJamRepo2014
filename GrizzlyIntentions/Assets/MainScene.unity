@@ -856,7 +856,7 @@ ParticleSystem:
   randomSeed: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   moveWithTransform: 1
   InitialModule:
     enabled: 1
@@ -3658,6 +3658,10 @@ Prefab:
       propertyPath: fire1Input
       value: Fire1 - Player 2
       objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
   m_RootGameObject: {fileID: 141554733}
@@ -3738,7 +3742,7 @@ ParticleSystem:
   randomSeed: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   moveWithTransform: 1
   InitialModule:
     enabled: 1
@@ -4860,6 +4864,10 @@ Prefab:
       propertyPath: fire1Input
       value: Fire1 - Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
   m_RootGameObject: {fileID: 492016949}
@@ -5313,6 +5321,10 @@ Prefab:
       propertyPath: fire1Input
       value: Fire1 - Player 3
       objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
   m_RootGameObject: {fileID: 638140334}
@@ -5445,7 +5457,7 @@ ParticleSystem:
   randomSeed: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   moveWithTransform: 1
   InitialModule:
     enabled: 1
@@ -7308,6 +7320,10 @@ Prefab:
       propertyPath: fire1Input
       value: Fire1 - Player 4
       objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
   m_RootGameObject: {fileID: 1398342001}
@@ -7652,7 +7668,7 @@ ParticleSystem:
   randomSeed: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   moveWithTransform: 1
   InitialModule:
     enabled: 1
