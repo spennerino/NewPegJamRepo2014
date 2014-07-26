@@ -1088,6 +1088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33029577a29fb542aa5c6dbf5e65218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene: MainScene
   speedMod: .5
   startPosition: {x: 0, y: 20, z: -20}
   endPosition: {x: 0, y: .5, z: -8}
