@@ -13,7 +13,7 @@ GameObject:
   - 95: {fileID: 9500000}
   - 65: {fileID: 6500000}
   m_Layer: 0
-  m_Name: The Tent
+  m_Name: tent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,8 +25,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -.43167761, z: 0, w: .902028024}
+  m_LocalPosition: {x: -8.39686775, y: -2.15302849, z: -2.60201168}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -43,7 +43,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 9c8a97d52926e40099eee0c9f71c40c4, type: 2}
+  - {fileID: 2100000, guid: ba5543b8ecc229d45ad159f189d989e8, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -68,8 +68,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .633695066, y: .550402462, z: .616979837}
-  m_Center: {x: .00132507086, y: .252393395, z: 0}
+  m_Size: {x: 6.33695173, y: 5.50402498, z: 6.1697998}
+  m_Center: {x: .0132513065, y: 2.52393413, z: 9.53674316e-07}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
