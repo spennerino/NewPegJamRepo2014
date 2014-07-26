@@ -3,22 +3,21 @@ using System.Collections;
 
 public class BearChase : MonoBehaviour
 {
-
     public Transform victim;
-    private NavMeshAgent navComponent;
+	private NavMeshAgent agent;
 
     // Use this for initialization
     void Start()
     {
-        navComponent = this.transform.GetComponent<NavMeshAgent>();
+		agent = GetComponent<NavMeshAgent> ();
+		
+		agent.updateRotation =	true;
+		agent.updatePosition = 	true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (victim)
-        {
-            navComponent.SetDestination(victim.position);
-        }
+		agent.SetDestination (victim.position);
     }
 }
