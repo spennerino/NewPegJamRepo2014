@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CharacterController : MonoBehaviour
+public class DudeController : MonoBehaviour
 {
 	public float Speed = 400;
 	public float TopSpeed = 750;
-	private Rigidbody rigidbody;
 	// Use this for initialization
 	void Start()
 	{
-		rigidbody = GetComponent<Rigidbody>();
 	}
 
 	// Update is called once per frame
