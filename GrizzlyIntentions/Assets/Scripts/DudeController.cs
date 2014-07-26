@@ -6,9 +6,12 @@ public class DudeController : MonoBehaviour
 	private bool Dead = false;
 	public float Speed = 400;
 	public float TopSpeed = 750;
+	private GameObject bloodSpray;
 	// Use this for initialization
 	void Start()
 	{
+		bloodSpray = transform.Find("BloodSpray").gameObject;
+		bloodSpray.particleSystem.Stop();
 	}
 
 	// Update is called once per frame
@@ -51,8 +54,9 @@ public class DudeController : MonoBehaviour
 
 				Dead = true;
 
-				GameObject obj = transform.Find("thehuman").gameObject;
-				obj.animation.Play("Die");
+				GameObject human = transform.Find("thehuman").gameObject;
+				human.animation.Play("Die");
+				bloodSpray.particleSystem.Play();
 			}
 		}
 	}
