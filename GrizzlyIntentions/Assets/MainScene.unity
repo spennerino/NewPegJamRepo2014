@@ -335,6 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632ca135bb819654685e31f689f46e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dead: 0
   Speed: 750
   TopSpeed: 1250
   horizontalAxis: Horizontal - Player 2
@@ -2221,6 +2222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632ca135bb819654685e31f689f46e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dead: 0
   Speed: 750
   TopSpeed: 1250
   horizontalAxis: Horizontal - Player 1
@@ -2596,6 +2598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632ca135bb819654685e31f689f46e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dead: 0
   Speed: 750
   TopSpeed: 1250
   horizontalAxis: Horizontal - Player 3
@@ -3662,6 +3665,10 @@ Prefab:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300008, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 56f22844cf54d0843a597e1d4a5cc84c, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
   m_RootGameObject: {fileID: 141554733}
@@ -4868,6 +4875,10 @@ Prefab:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300008, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 596bae7825be4f249bd8725fce805b40, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
   m_RootGameObject: {fileID: 492016949}
@@ -5250,7 +5261,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 809b0047f4ab35e46880ee1b64dcc589, type: 2}
+  - {fileID: 2100000, guid: 596bae7825be4f249bd8725fce805b40, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -5325,6 +5336,10 @@ Prefab:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300008, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8570b74cad087a1449feca62f834644d, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
   m_RootGameObject: {fileID: 638140334}
@@ -6669,6 +6684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632ca135bb819654685e31f689f46e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dead: 0
   Speed: 750
   TopSpeed: 1250
   horizontalAxis: Horizontal - Player 4
@@ -6836,7 +6852,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 809b0047f4ab35e46880ee1b64dcc589, type: 2}
+  - {fileID: 2100000, guid: c38b2c9cc68ccfb4fa9c511428f79df5, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -7324,6 +7340,10 @@ Prefab:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300008, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c38b2c9cc68ccfb4fa9c511428f79df5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
   m_RootGameObject: {fileID: 1398342001}
@@ -7428,7 +7448,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 809b0047f4ab35e46880ee1b64dcc589, type: 2}
+  - {fileID: 2100000, guid: 8570b74cad087a1449feca62f834644d, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -7535,7 +7555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4cd28047c91d814094a5699d7d85a78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  victim: {fileID: 492016950}
+  currentVictim: {fileID: 0}
 --- !u!23 &1672495107
 Renderer:
   m_ObjectHideFlags: 0
@@ -9104,7 +9124,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 809b0047f4ab35e46880ee1b64dcc589, type: 2}
+  - {fileID: 2100000, guid: 56f22844cf54d0843a597e1d4a5cc84c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
