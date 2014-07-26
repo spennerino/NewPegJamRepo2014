@@ -4,6 +4,8 @@ using System.Collections;
 public class Punch : MonoBehaviour
 {
 
+    public string fire1Input;
+
     // Use this for initialization
     void Start()
     {
@@ -16,7 +18,7 @@ public class Punch : MonoBehaviour
         RaycastHit hit;
         Ray frontCheck = new Ray(this.transform.position, this.transform.forward);
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetButton(fire1Input))
         {
             if (Physics.Raycast(frontCheck, out hit, 5))
             {

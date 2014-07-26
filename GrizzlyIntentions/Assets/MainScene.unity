@@ -337,6 +337,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 750
   TopSpeed: 1250
+  horizontalAxis: Horizontal - Player 2
+  verticalAxis: Vertical - Player 2
 --- !u!54 &141554736
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -378,6 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270bd65ac79ed24409489a05ce1b93b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fire1Input: Fire1 - Player 2
 --- !u!1 &145811419
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,6 +625,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 400
   TopSpeed: 750
+  horizontalAxis: 
+  verticalAxis: 
 --- !u!1 &275668906
 GameObject:
   m_ObjectHideFlags: 0
@@ -2272,6 +2277,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 750
   TopSpeed: 1250
+  horizontalAxis: Horizontal - Player 1
+  verticalAxis: Vertical - Player 1
 --- !u!54 &492016952
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2313,6 +2320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270bd65ac79ed24409489a05ce1b93b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fire1Input: Fire1 - Player 1
 --- !u!1 &521333262
 GameObject:
   m_ObjectHideFlags: 0
@@ -2644,6 +2652,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 750
   TopSpeed: 1250
+  horizontalAxis: Horizontal - Player 3
+  verticalAxis: Vertical - Player 3
 --- !u!54 &638140337
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2685,6 +2695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270bd65ac79ed24409489a05ce1b93b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fire1Input: Fire1 - Player 3
 --- !u!1 &644354886
 GameObject:
   m_ObjectHideFlags: 0
@@ -3688,6 +3699,18 @@ Prefab:
     - target: {fileID: 100022, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
       propertyPath: m_Name
       value: Dude 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: horizontalAxis
+      value: Horizontal - Player 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: verticalAxis
+      value: Vertical - Player 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: fire1Input
+      value: Fire1 - Player 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
@@ -4879,6 +4902,18 @@ Prefab:
       propertyPath: m_Name
       value: Dude 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: horizontalAxis
+      value: Horizontal - Player 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: verticalAxis
+      value: Vertical - Player 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: fire1Input
+      value: Fire1 - Player 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
   m_RootGameObject: {fileID: 492016949}
@@ -5319,6 +5354,18 @@ Prefab:
     - target: {fileID: 100022, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
       propertyPath: m_Name
       value: Dude 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: horizontalAxis
+      value: Horizontal - Player 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: verticalAxis
+      value: Vertical - Player 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: fire1Input
+      value: Fire1 - Player 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
@@ -6666,6 +6713,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 750
   TopSpeed: 1250
+  horizontalAxis: Horizontal - Player 4
+  verticalAxis: Vertical - Player 4
 --- !u!54 &1398342004
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6707,6 +6756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270bd65ac79ed24409489a05ce1b93b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fire1Input: Fire1 - Player 4
 --- !u!1 &1408632188
 GameObject:
   m_ObjectHideFlags: 0
@@ -7299,6 +7349,18 @@ Prefab:
     - target: {fileID: 100022, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
       propertyPath: m_Name
       value: Dude 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: horizontalAxis
+      value: Horizontal - Player 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: verticalAxis
+      value: Vertical - Player 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: fire1Input
+      value: Fire1 - Player 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
