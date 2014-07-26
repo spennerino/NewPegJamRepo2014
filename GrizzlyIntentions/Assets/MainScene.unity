@@ -33,13 +33,28 @@ LevelGameManager:
 LightmapSettings:
   m_ObjectHideFlags: 0
   m_LightProbes: {fileID: 0}
-  m_Lightmaps: []
+  m_Lightmaps:
+  - m_Lightmap: {fileID: 2800000, guid: 5850fbbee4bcf3e4d8986fe70c742f8e, type: 3}
+    m_IndirectLightmap: {fileID: 2800000, guid: 539d222ddd7d2c742a324ce647cad2b9,
+      type: 3}
+  - m_Lightmap: {fileID: 2800000, guid: 7f11eacffe4289b46b0ddb162c9770ca, type: 3}
+    m_IndirectLightmap: {fileID: 2800000, guid: 4c05c788abc8bd74792f4511b2f401a8,
+      type: 3}
+  - m_Lightmap: {fileID: 2800000, guid: 12add24cc997fbc4eada1b3109154986, type: 3}
+    m_IndirectLightmap: {fileID: 2800000, guid: dc228882e2d889e408adcd75250d6141,
+      type: 3}
+  - m_Lightmap: {fileID: 2800000, guid: 1127548c8788b9d4bb235790be6e7266, type: 3}
+    m_IndirectLightmap: {fileID: 2800000, guid: 51741287f3042974db18495bfb0f5733,
+      type: 3}
+  - m_Lightmap: {fileID: 2800000, guid: 1503669073badec44800d8ec1c2b9550, type: 3}
+    m_IndirectLightmap: {fileID: 2800000, guid: dbd432896fd62e24786e5a72372e59ef,
+      type: 3}
   m_LightmapsMode: 1
   m_BakedColorSpace: 0
   m_UseDualLightmapsInForward: 0
   m_LightmapEditorSettings:
     m_Resolution: 50
-    m_LastUsedResolution: 0
+    m_LastUsedResolution: 50
     m_TextureWidth: 1024
     m_TextureHeight: 1024
     m_BounceBoost: 1
@@ -102,7 +117,7 @@ Transform:
   m_GameObject: {fileID: 272456687}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10, y: 10, z: -10}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 659131891}
   m_Father: {fileID: 275668907}
@@ -513,8 +528,8 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_LightmapIndex: 3
+  m_LightmapTilingOffset: {x: 1, y: 1, z: -.00405576639, w: -.00405576639}
   m_Materials:
   - {fileID: 2100000, guid: 9748623593474ae40934ff5fd5d875b4, type: 2}
   m_SubsetIndices: 
@@ -614,8 +629,8 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_LightmapIndex: 2
+  m_LightmapTilingOffset: {x: 1, y: 1, z: -.00405576639, w: -.00405576639}
   m_Materials:
   - {fileID: 2100000, guid: 9748623593474ae40934ff5fd5d875b4, type: 2}
   m_SubsetIndices: 
@@ -677,13 +692,13 @@ Light:
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
-    m_Strength: 1
+    m_Strength: .5
     m_Bias: .0500000007
     m_Softness: 4
     m_SoftnessFade: 1
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
-  m_ActuallyLightmapped: 0
+  m_ActuallyLightmapped: 1
   m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
@@ -746,8 +761,8 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_LightmapIndex: 1
+  m_LightmapTilingOffset: {x: 1, y: 1, z: -.00405576639, w: -.00405576639}
   m_Materials:
   - {fileID: 2100000, guid: 9748623593474ae40934ff5fd5d875b4, type: 2}
   m_SubsetIndices: 
@@ -802,7 +817,7 @@ Transform:
   m_GameObject: {fileID: 1666659023}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10, y: 10, z: 10}
-  m_LocalScale: {x: 8, y: 8, z: 8}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1169827507}
   m_Father: {fileID: 275668907}
@@ -1058,10 +1073,10 @@ Camera:
     width: 1
     height: 1
   near clip plane: .300000012
-  far clip plane: 200
-  field of view: 60
+  far clip plane: 500
+  field of view: 30
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 30
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1080,7 +1095,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1848891763}
   m_LocalRotation: {x: .642787635, y: 0, z: 0, w: .766044497}
-  m_LocalPosition: {x: 0, y: 45, z: -10}
+  m_LocalPosition: {x: 0, y: 150, z: -27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1240,8 +1255,8 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_LightmapIndex: 0
+  m_LightmapTilingOffset: {x: 1, y: 1, z: -.00405576639, w: -.00405576639}
   m_Materials:
   - {fileID: 2100000, guid: 9748623593474ae40934ff5fd5d875b4, type: 2}
   m_SubsetIndices: 
@@ -1425,8 +1440,8 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_LightmapIndex: 4
+  m_LightmapTilingOffset: {x: 1, y: 1, z: -.00405576639, w: -.00405576639}
   m_Materials:
   - {fileID: 2100000, guid: bd7c879da715de146b883b3ea3eae2c7, type: 2}
   m_SubsetIndices: 
