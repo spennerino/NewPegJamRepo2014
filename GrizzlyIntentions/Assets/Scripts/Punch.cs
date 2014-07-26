@@ -5,12 +5,8 @@ public class Punch : MonoBehaviour
 {
 
     public string fire1Input;
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
+    private float punchRate = 5;
+    private float nextPunch = 0;
 
     // Update is called once per frame
     void Update()
@@ -18,13 +14,14 @@ public class Punch : MonoBehaviour
         RaycastHit hit;
         Ray frontCheck = new Ray(this.transform.position, this.transform.forward);
 
-        if (Input.GetButton(fire1Input))
+        if (Input.GetButton(fire1Input) && Time.time > nextPunch)
         {
             if (Physics.Raycast(frontCheck, out hit, 5))
             {
-                if (hit.collider.tag == "Player")
+                if (hit.collider.tag == "Player" || hit.collider.tag == "Bear")
                 {
-                    hit.rigidbody.AddForce(this.transform.forward * 10000);
+                    nextPunch = Time.time + punchRate;
+                    hit.rigidbody.AddForce(this.transform.forward * 1000);
                 }
             }
         }
