@@ -3,6 +3,8 @@ using System.Collections;
 
 public class MenuController : MonoBehaviour
 {
+	public string nextScene = "";
+
 	public float speedMod = 0.5f;
 	private float startIncrement = 0.01f;
 	private float endIncrement = 0.25f;
@@ -53,7 +55,7 @@ public class MenuController : MonoBehaviour
 
 		if (complete && Input.anyKey)
 		{
-			AutoFade.LoadLevel("MainScene", 0.5f, 0.5f, Color.black);
+			AutoFade.LoadLevel(nextScene, 0.5f, 0.5f, Color.black);
 		}
 	}
 }
