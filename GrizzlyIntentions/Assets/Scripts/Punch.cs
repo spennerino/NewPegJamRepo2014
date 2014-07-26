@@ -14,16 +14,15 @@ public class Punch : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        Ray frontCheck = new Ray(this.transform.position, Vector3.forward);
-        Debug.DrawRay(this.transform.position, Vector3.forward * 10);
+        Ray frontCheck = new Ray(this.transform.position, this.transform.forward);
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (Physics.Raycast(frontCheck, out hit, 10))
+            if (Physics.Raycast(frontCheck, out hit, 5))
             {
-                if (hit.collider.tag == "Player")
+                if (hit.collider.tag == "Bear")
                 {
-                    hit.rigidbody.AddForce(Vector3.forward * 10000);
+                    hit.rigidbody.AddForce(this.transform.forward * 10000);
                 }
             }
         }
