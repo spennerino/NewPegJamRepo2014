@@ -341,7 +341,7 @@ MonoBehaviour:
   Speed: 750
   TopSpeed: 1250
   SprintSpeed: 1000
-  AvailableSprint: 100
+  TopSprintSpeed: 3000
   horizontalAxis: Horizontal - Player 2
   verticalAxis: Vertical - Player 2
   sprintButton: Sprint - Player 1
@@ -2352,7 +2352,7 @@ MonoBehaviour:
   Speed: 750
   TopSpeed: 1250
   SprintSpeed: 1000
-  AvailableSprint: 100
+  TopSprintSpeed: 3000
   horizontalAxis: Horizontal - Player 1
   verticalAxis: Vertical - Player 1
   sprintButton: Sprint - Player 1
@@ -2879,7 +2879,7 @@ MonoBehaviour:
   Speed: 750
   TopSpeed: 1250
   SprintSpeed: 1000
-  AvailableSprint: 100
+  TopSprintSpeed: 3000
   horizontalAxis: Horizontal - Player 3
   verticalAxis: Vertical - Player 3
   sprintButton: Sprint - Player 1
@@ -10426,7 +10426,7 @@ MonoBehaviour:
   Speed: 750
   TopSpeed: 1250
   SprintSpeed: 1000
-  AvailableSprint: 100
+  TopSprintSpeed: 3000
   horizontalAxis: Horizontal - Player 4
   verticalAxis: Vertical - Player 4
   sprintButton: Sprint - Player 1

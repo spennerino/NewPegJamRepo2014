@@ -5,14 +5,16 @@ public class DudeController : MonoBehaviour
 {
 	public bool Dead = false;
 
-	public float Speed = 400;
-	public float TopSpeed = 750;
-	public float SprintSpeed = 1000;
+	public float Speed = 			750;
+	public float TopSpeed = 		1250;
+	public float SprintSpeed =		1500;
+	public float TopSprintSpeed =	3000;
 
-	private float MaximumSprint = 100;
-	public float AvailableSprint = 100;
-	private float SprintRegenSpeed = 0.025f;
-	private bool isSprinting = false;
+	private bool isSprinting = 		false;
+	private float sprintStartTime = 0;
+	private float maxSprintTime = 	3;
+	private float sprintCooldown = 	30;
+	private float sprintCooldownStartTime = 0;
 
 	private GameObject bloodSpray;
 
@@ -38,32 +40,58 @@ public class DudeController : MonoBehaviour
 			Vector3 force = new Vector3(horizontal, 0, vertical);
 
 
-
-			if (!System.String.IsNullOrEmpty(sprintButton))
+			//sprint button mapping
+			if(!System.String.IsNullOrEmpty(sprintButton))
 			{
-				if (Input.GetButton(sprintButton) && AvailableSprint > 0 && rigidbody.velocity.magnitude < SprintSpeed)
+				if(Input.GetButton (sprintButton))
 				{
-					rigidbody.AddForce(force.normalized * SprintSpeed * Time.deltaTime);
-
-					if (rigidbody.velocity.magnitude > SprintSpeed)
+					if(sprintStartTime == 0)
 					{
-						rigidbody.velocity = rigidbody.velocity.normalized * SprintSpeed;
+						sprintStartTime = Time.time;
 					}
 
-					AvailableSprint--;
-					isSprinting = true;
-				}
-				else
-				{
-					if (AvailableSprint < MaximumSprint)
+					if((Time.time - sprintStartTime) <= maxSprintTime)
 					{
-						AvailableSprint += SprintRegenSpeed;
+						Debug.Log ("I'M SPRINTING");
+						isSprinting = true;
 					}
-					isSprinting = false;
+					else
+					{
+						Debug.Log ("CAN'T SPRINT");
+						isSprinting = false;
+					}
 				}
 			}
 
-			if (!isSprinting)
+
+			//sprint cooldown - if sprint is exceeded, start cooldown
+			if((Time.time - sprintStartTime) >= maxSprintTime)
+			{
+				if(sprintCooldownStartTime == 0)
+				{
+					sprintCooldownStartTime = Time.time;
+				}
+
+				if((Time.time - sprintCooldownStartTime) > sprintCooldown)
+				{
+					Debug.Log ("I CAN SPRINT ONCE MORE");
+					sprintStartTime = 0;
+					sprintCooldownStartTime = 0;
+				}
+			}
+
+
+			//apply movement force
+			if (isSprinting)
+			{
+				rigidbody.AddForce(force.normalized * SprintSpeed * Time.deltaTime);
+				
+				if (rigidbody.velocity.magnitude > TopSprintSpeed)
+				{
+					rigidbody.velocity = rigidbody.velocity.normalized * TopSprintSpeed;
+				}
+			}
+			else
 			{
 				rigidbody.AddForce(force.normalized * Speed * Time.deltaTime);
 
