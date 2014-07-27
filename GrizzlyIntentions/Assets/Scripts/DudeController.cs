@@ -19,6 +19,7 @@ public class DudeController : MonoBehaviour
 	private float sprintCooldownStartTime = 0;
 
 	private GameObject bloodSpray;
+	private GameObject sprintEffect;
 
 	public string horizontalAxis;
 	public string verticalAxis;
@@ -30,6 +31,9 @@ public class DudeController : MonoBehaviour
 		Dead = false;
 		bloodSpray = transform.Find("BloodSpray").gameObject;
 		bloodSpray.particleSystem.Stop();
+
+		sprintEffect = transform.Find("SprintEffect").gameObject;
+		sprintEffect.particleSystem.Stop();
 	}
 
 	// Update is called once per frame
@@ -59,6 +63,7 @@ public class DudeController : MonoBehaviour
 					{
 						Debug.Log("I'M SPRINTING");
 						isSprinting = true;
+						sprintEffect.particleSystem.Play();
 					}
 				}
 			}
