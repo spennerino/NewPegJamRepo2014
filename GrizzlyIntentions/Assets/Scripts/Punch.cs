@@ -36,6 +36,7 @@ public class Punch : MonoBehaviour
 		if (Input.GetButtonDown(fire1Input) && Time.time > nextPunch)
 		{
 			punchEffect.particleSystem.Play();
+			punchEffect.audio.Play();
 			nextPunch = Time.time + punchRate;
 
 			foreach (GameObject obj in gameObjects)
