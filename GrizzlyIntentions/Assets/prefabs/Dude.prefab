@@ -1094,9 +1094,9 @@ MonoBehaviour:
   TopSpeed: 1250
   SprintSpeed: 1000
   TopSprintSpeed: 3000
-  horizontalAxis: Horizontal - Player 1
-  verticalAxis: Vertical - Player 1
-  sprintButton: Sprint - Player 1
+  horizontalAxis: Horizontal - Keyboard
+  verticalAxis: Vertical - Keyboard
+  sprintButton: Sprint - Keyboard
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1108,7 +1108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270bd65ac79ed24409489a05ce1b93b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fire1Input: Fire1 - Player 1
+  punchInput: Punch - Keyboard
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
