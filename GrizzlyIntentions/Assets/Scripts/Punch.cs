@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Punch : MonoBehaviour
 {
-	public string fire1Input;
+	public string punchInput;
 	private float punchRate = 1;
 	private float nextPunch = 0;
 
@@ -26,14 +26,14 @@ public class Punch : MonoBehaviour
 				gameObjects.Add(obj);
 		}
 
-		punchEffect = transform.Find("PunchEffect").gameObject;
+		punchEffect = this.transform.Find("PunchEffect").gameObject;
 		punchEffect.particleSystem.Stop();
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		if (Input.GetButtonDown(fire1Input) && Time.time > nextPunch)
+		if (Input.GetButtonDown(punchInput) && Time.time > nextPunch)
 		{
 			punchEffect.particleSystem.Play();
 			punchEffect.audio.Play();
@@ -41,11 +41,11 @@ public class Punch : MonoBehaviour
 
 			foreach (GameObject obj in gameObjects)
 			{
-				Vector3 directionToTarget = transform.position - obj.transform.position;
-				float angle = Vector3.Angle(transform.forward, directionToTarget);
+				Vector3 directionToTarget = this.transform.position - obj.transform.position;
+				float angle = Vector3.Angle(this.transform.forward, directionToTarget);
 				if (Mathf.Abs(angle) > 135
-					&& ((Vector3.Distance(transform.position, obj.transform.position) < 7.5 && obj.tag == "Bear"))
-					|| (Vector3.Distance(transform.position, obj.transform.position) < 4))
+					&& ((Vector3.Distance(this.transform.position, obj.transform.position) < 7.5 && obj.tag == "Bear"))
+					|| (Vector3.Distance(this.transform.position, obj.transform.position) < 4))
 				{
 					obj.transform.rigidbody.velocity = Vector3.zero;
 					obj.transform.rigidbody.AddForce(this.transform.forward * 1500);

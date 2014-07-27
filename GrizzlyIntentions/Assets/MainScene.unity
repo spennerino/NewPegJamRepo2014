@@ -1351,7 +1351,7 @@ MonoBehaviour:
   TopSprintSpeed: 3000
   horizontalAxis: Horizontal - Player 2
   verticalAxis: Vertical - Player 2
-  sprintButton: Sprint - Player 1
+  sprintButton: Sprint - Player 2
 --- !u!54 &141554736
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1393,7 +1393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270bd65ac79ed24409489a05ce1b93b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fire1Input: Fire1 - Player 2
+  punchInput: Punch - Player 2
 --- !u!82 &141554739
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5431,7 +5431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270bd65ac79ed24409489a05ce1b93b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fire1Input: Fire1 - Player 1
+  punchInput: Punch - Player 1
 --- !u!82 &492016955
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5533,6 +5533,26 @@ Prefab:
     - target: {fileID: 100022, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
       propertyPath: m_Name
       value: Dude 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: horizontalAxis
+      value: Horizontal - Player 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: verticalAxis
+      value: Vertical - Player 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: sprintButton
+      value: Sprint - Player 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: fire1Input
+      value: Punch - Player 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: punchInput
+      value: Punch - Player 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
@@ -6937,7 +6957,7 @@ MonoBehaviour:
   TopSprintSpeed: 3000
   horizontalAxis: Horizontal - Player 3
   verticalAxis: Vertical - Player 3
-  sprintButton: Sprint - Player 1
+  sprintButton: Sprint - Player 3
 --- !u!54 &638140337
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6979,7 +6999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270bd65ac79ed24409489a05ce1b93b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fire1Input: Fire1 - Player 3
+  punchInput: Punch - Player 3
 --- !u!82 &638140340
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12665,7 +12685,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
       propertyPath: fire1Input
-      value: Fire1 - Player 2
+      value: Punch - Player 2
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
       propertyPath: playOnAwake
@@ -12675,6 +12695,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 56f22844cf54d0843a597e1d4a5cc84c, type: 2}
+    - target: {fileID: 11400000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: sprintButton
+      value: Sprint - Player 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: punchInput
+      value: Punch - Player 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
   m_RootGameObject: {fileID: 141554733}
@@ -16872,7 +16900,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
       propertyPath: fire1Input
-      value: Fire1 - Player 3
+      value: Punch - Player 3
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
       propertyPath: playOnAwake
@@ -16882,6 +16910,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8570b74cad087a1449feca62f834644d, type: 2}
+    - target: {fileID: 11400000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: sprintButton
+      value: Sprint - Player 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: punchInput
+      value: Punch - Player 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
   m_RootGameObject: {fileID: 638140334}
@@ -18647,7 +18683,7 @@ MonoBehaviour:
   TopSprintSpeed: 3000
   horizontalAxis: Horizontal - Player 4
   verticalAxis: Vertical - Player 4
-  sprintButton: Sprint - Player 1
+  sprintButton: Sprint - Player 4
 --- !u!54 &1398342004
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18689,7 +18725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270bd65ac79ed24409489a05ce1b93b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fire1Input: Fire1 - Player 4
+  punchInput: Punch - Player 4
 --- !u!82 &1398342007
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20232,7 +20268,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
       propertyPath: fire1Input
-      value: Fire1 - Player 4
+      value: Punch - Player 4
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
       propertyPath: playOnAwake
@@ -20242,6 +20278,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c38b2c9cc68ccfb4fa9c511428f79df5, type: 2}
+    - target: {fileID: 11400000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: sprintButton
+      value: Sprint - Player 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
+      propertyPath: punchInput
+      value: Punch - Player 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55371357f49870c4f901d3440f1597c8, type: 2}
   m_RootGameObject: {fileID: 1398342001}
