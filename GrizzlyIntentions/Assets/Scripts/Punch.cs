@@ -52,7 +52,7 @@ public class Punch : MonoBehaviour
 
 					DudeController myController = GetComponent<DudeController>();
 
-					myController.Score += (ulong)punchPointBonus;
+					myController.Score += punchPointBonus;
 				}
 			}
 		}
