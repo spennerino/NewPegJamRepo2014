@@ -55,11 +55,6 @@ public class DudeController : MonoBehaviour
 						Debug.Log ("I'M SPRINTING");
 						isSprinting = true;
 					}
-					else
-					{
-						Debug.Log ("CAN'T SPRINT");
-						isSprinting = false;
-					}
 				}
 			}
 
@@ -67,6 +62,9 @@ public class DudeController : MonoBehaviour
 			//sprint cooldown - if sprint is exceeded, start cooldown
 			if((Time.time - sprintStartTime) >= maxSprintTime)
 			{
+				Debug.Log ("CAN'T SPRINT");
+				isSprinting = false;
+
 				if(sprintCooldownStartTime == 0)
 				{
 					sprintCooldownStartTime = Time.time;
