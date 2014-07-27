@@ -17,6 +17,9 @@ public class BearChase : MonoBehaviour
 
 
 	private float currentBearSpeed =		0;
+	private float currentBearAccel =		0;
+	private float currentBearAngSpeed =		0;
+
 	private float bearSpeedMulti =			1.1f;
 	private float bearSpeedMultiIncrease = 	0.25f;
 	private float bearSpeedStartTime = 		0;
@@ -34,6 +37,8 @@ public class BearChase : MonoBehaviour
 		agent.updatePosition = true;
 
 		currentBearSpeed = agent.speed;
+		currentBearAccel = agent.acceleration;
+		currentBearAngSpeed = agent.angularSpeed;
 		bearSpeedStartTime = Time.time;
 	}
 
@@ -45,8 +50,12 @@ public class BearChase : MonoBehaviour
 		if ((Time.time - bearSpeedStartTime) >= bearSpeedInterval)
 		{
 			currentBearSpeed *= bearSpeedMulti;
+			currentBearAccel *= bearSpeedMulti;
+			currentBearAngSpeed *= bearSpeedMulti;
 
 			agent.speed = currentBearSpeed;
+			agent.acceleration = currentBearAccel;
+			agent.angularSpeed = currentBearAngSpeed;
 
 			Debug.Log ("OH SHAIT I'M SPEEDING UP: now at " +currentBearSpeed.ToString());
 
