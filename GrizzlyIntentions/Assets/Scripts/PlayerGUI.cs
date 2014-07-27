@@ -8,6 +8,7 @@ public class PlayerGUI : MonoBehaviour {
 
 	void Start()
 	{
+		Screen.showCursor = false;
 		currentPlayers = PlayerUtil.GetPlayers ();
 	}
 
