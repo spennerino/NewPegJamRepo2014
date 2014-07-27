@@ -23,8 +23,6 @@ public class BearChase : MonoBehaviour
 	private float bearSpeedMultiIncrease = 	0.25f;
 	private float bearSpeedStartTime = 		0;
 	private float bearSpeedInterval = 		15;
-	
-	private DudeController	lastManStanding =		null;
 
 	// Use this for initialization
 	void Start()
@@ -79,7 +77,6 @@ public class BearChase : MonoBehaviour
 				if (currentDistance < lastDistance || lastDistance == 0)
 				{
 					currentVictim =		player.transform;
-					lastManStanding = 	player.GetComponent<DudeController>();
 					lastDistance = 		currentDistance;
 				}
 			}
@@ -101,8 +98,14 @@ public class BearChase : MonoBehaviour
 			else
 			{
 				//push scores and winner to playerprefs
-                PlayerPrefs.SetString("LastWinner", "");
-				PlayerPrefs.SetInt("LastHighscore", lastManStanding.Score);
+				for(int i = 0; i < availableVictims.Count; i++)
+				{
+					DudeController pc = availableVictims[i].GetComponent<DudeController>();
+
+					PlayerPrefs.SetInt ("P" + (i+1).ToString() + "Score", pc.Score);
+				}
+
+				PlayerPrefs.Save();
 
 				//load win scene
 				AutoFade.LoadLevel("WinScene", 0.5f, 0.5f, Color.black);

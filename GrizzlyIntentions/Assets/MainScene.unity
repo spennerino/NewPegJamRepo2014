@@ -2461,6 +2461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dead: 0
+  PublicName: Unnamed Dude
   Score: 0
   Speed: 750
   TopSpeed: 1250
@@ -8743,6 +8744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dead: 0
+  PublicName: Unnamed Dude
   Score: 0
   Speed: 750
   TopSpeed: 1250
@@ -9894,6 +9896,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 448fa68ec43683e4ba7b9c1ab13ca5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  p1Name: 
+  p2Name: 
+  p3Name: 
+  p4Name: 
 --- !u!4 &601277643
 Transform:
   m_ObjectHideFlags: 0
@@ -10245,6 +10251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dead: 0
+  PublicName: Unnamed Dude
   Score: 0
   Speed: 750
   TopSpeed: 1250
@@ -23199,6 +23206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dead: 0
+  PublicName: Unnamed Dude
   Score: 0
   Speed: 750
   TopSpeed: 1250

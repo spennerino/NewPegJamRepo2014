@@ -53,9 +53,11 @@ public class MenuController : MonoBehaviour
 		}
 		transform.position = Vector3.Lerp(startPosition, endPosition, progress);
 
+		/*
 		if (complete && Input.anyKey)
 		{
 			AutoFade.LoadLevel(nextScene, 0.5f, 0.5f, Color.black);
 		}
+		*/
 	}
 }
