@@ -40,7 +40,7 @@ public class Punch : MonoBehaviour
 				Vector3 directionToTarget = transform.position - obj.transform.position;
 				float angle = Vector3.Angle(transform.forward, directionToTarget);
 				if (Mathf.Abs(angle) > 135
-					&& ((Vector3.Distance(transform.position, obj.transform.position) < 8 && obj.tag == "Bear"))
+					&& ((Vector3.Distance(transform.position, obj.transform.position) < 7 && obj.tag == "Bear"))
 					|| (Vector3.Distance(transform.position, obj.transform.position) < 4))
 				{
 					obj.transform.rigidbody.velocity = Vector3.zero;
