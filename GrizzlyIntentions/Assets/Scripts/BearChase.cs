@@ -23,8 +23,6 @@ public class BearChase : MonoBehaviour
 	private float bearSpeedMultiIncrease = 	0.25f;
 	private float bearSpeedStartTime = 		0;
 	private float bearSpeedInterval = 		15;
-	
-	private DudeController	lastManStanding =		null;
 
 	// Use this for initialization
 	void Start()
@@ -79,7 +77,6 @@ public class BearChase : MonoBehaviour
 				if (currentDistance < lastDistance || lastDistance == 0)
 				{
 					currentVictim =		player.transform;
-					lastManStanding = 	player.GetComponent<DudeController>();
 					lastDistance = 		currentDistance;
 				}
 			}
