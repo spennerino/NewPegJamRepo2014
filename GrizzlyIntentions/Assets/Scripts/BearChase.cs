@@ -18,6 +18,7 @@ public class BearChase : MonoBehaviour
 
 	private float currentBearSpeed =	0;
 	private float bearSpeedMulti =		1.1f;
+	private float bearSpeedMultiMulti =	1.5f;
 	private float bearSpeedStartTime = 	0;
 	private float bearSpeedInterval = 	15;
 
@@ -45,8 +46,11 @@ public class BearChase : MonoBehaviour
 		{
 			currentBearSpeed *= bearSpeedMulti;
 
+			agent.speed = currentBearSpeed;
+
 			Debug.Log ("OH SHAIT I'M SPEEDING UP: now at " +currentBearSpeed.ToString());
 
+			bearSpeedMulti *= bearSpeedMultiMulti;
 			bearSpeedStartTime = Time.time;
 		}
 
