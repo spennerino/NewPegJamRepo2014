@@ -78,9 +78,9 @@ LightmapSettings:
 NavMeshSettings:
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    agentRadius: .5
-    agentHeight: 2
-    agentSlope: 50
+    agentRadius: 1
+    agentHeight: 4
+    agentSlope: 45
     agentClimb: .400000006
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -8122,8 +8122,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 737333895}
-  m_LocalRotation: {x: .520749152, y: 0, z: 0, w: .853709757}
-  m_LocalPosition: {x: 0, y: 108.905655, z: -61.0845604}
+  m_LocalRotation: {x: .5200544, y: 0, z: 0, w: .854133189}
+  m_LocalPosition: {x: 0, y: 108.217674, z: -60.7265549}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -19239,7 +19239,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1364874665}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: 61.2506599, y: 25, z: -4.57609531e-06}
+  m_LocalPosition: {x: 59.706543, y: 25, z: -4.57609531e-06}
   m_LocalScale: {x: 75.0863419, y: 50, z: 1}
   m_Children: []
   m_Father: {fileID: 1304627296}
@@ -26446,7 +26446,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1964827836}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: -58.7956696, y: 25, z: 2.51700908e-06}
+  m_LocalPosition: {x: -56.3479424, y: 25, z: 2.51700908e-06}
   m_LocalScale: {x: 75.5878601, y: 50, z: 1}
   m_Children: []
   m_Father: {fileID: 1304627296}
