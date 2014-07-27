@@ -8,7 +8,10 @@ public class PlayerGUI : MonoBehaviour {
 
 	public string p1Name, p2Name, p3Name, p4Name;
 	private bool p1Playing, p2Playing, p3Playing, p4Playing;
-	
+
+	private int GUIBoxWidth = 200;
+	private int GUIBoxHeight = 45;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -33,12 +36,20 @@ public class PlayerGUI : MonoBehaviour {
 		GUIStyle boxstyle = new GUIStyle ();
 		boxstyle.normal.background = MakeTexture (new Color(0,0,0, 0.5f));
 
+		GUIStyle ltext = new GUIStyle ();
+		GUIStyle rtext = new GUIStyle ();
+		ltext.alignment = UnityEngine.TextAnchor.MiddleLeft;
+		ltext.normal.textColor = Color.white;
+		ltext.padding = new RectOffset (10, 0, 5, 0);
+		rtext.alignment = UnityEngine.TextAnchor.MiddleRight;
+		rtext.normal.textColor = Color.white;
+		rtext.padding = new RectOffset (0, 10, 5, 0);
 
 
-		DrawRectangle (new Rect (0, 0, 10, 40), Color.red);
+		DrawRectangle (new Rect (0, 0, 10, GUIBoxHeight), Color.red);
 
-		GUILayout.BeginArea (new Rect (10, 0, 100, 40), boxstyle);
-		GUILayout.Label( p1Name + "\r\n" + p1.Score.ToString() );
+		GUILayout.BeginArea (new Rect (10, 0, GUIBoxWidth, GUIBoxHeight), boxstyle);
+		GUILayout.Label( p1Name + "\r\n" + p1.Score.ToString(), ltext, null );
 		GUILayout.EndArea ();
 
 
@@ -46,10 +57,10 @@ public class PlayerGUI : MonoBehaviour {
 		{
 			DudeController p2 = currentPlayers [1].GetComponent<DudeController> ();
 
-			DrawRectangle (new Rect (Screen.width - 10,0,10,40), Color.yellow);
+			DrawRectangle (new Rect (Screen.width - 10, 0, 10, GUIBoxHeight), Color.yellow);
 			
-			GUILayout.BeginArea (new Rect (Screen.width - 110,0,100,40), boxstyle);
-			GUILayout.Label( p2Name + "\r\n" + p2.Score.ToString() );
+			GUILayout.BeginArea (new Rect (Screen.width - (GUIBoxWidth + 10), 0, GUIBoxWidth, GUIBoxHeight), boxstyle);
+			GUILayout.Label( p2Name + "\r\n" + p2.Score.ToString(), rtext, null );
 			GUILayout.EndArea ();
 		}
 
@@ -58,10 +69,10 @@ public class PlayerGUI : MonoBehaviour {
 			DudeController p3 = currentPlayers [2].GetComponent<DudeController> ();
 
 			Color purple = new Color(0.8f, 0.1f, 0.8f, 1f);
-			DrawRectangle (new Rect (0, Screen.height - 40, 10, 40), purple);
+			DrawRectangle (new Rect (0, Screen.height - GUIBoxHeight, 10, GUIBoxHeight), purple);
 			
-			GUILayout.BeginArea (new Rect (10, Screen.height - 40,100,40), boxstyle);
-			GUILayout.Label( p3Name + "\r\n" + p3.Score.ToString() );
+			GUILayout.BeginArea (new Rect (10, Screen.height - GUIBoxHeight, GUIBoxWidth, GUIBoxHeight), boxstyle);
+			GUILayout.Label( p3Name + "\r\n" + p3.Score.ToString(), ltext, null );
 			GUILayout.EndArea ();
 		}
 
@@ -69,10 +80,10 @@ public class PlayerGUI : MonoBehaviour {
 		{
 			DudeController p4 = currentPlayers [3].GetComponent<DudeController> ();
 
-			DrawRectangle (new Rect (Screen.width - 10, Screen.height - 40, 10, 40), Color.cyan);
+			DrawRectangle (new Rect (Screen.width - 10, Screen.height - GUIBoxHeight, 10, GUIBoxHeight), Color.cyan);
 			
-			GUILayout.BeginArea (new Rect (Screen.width - 110, Screen.height - 40, 100, 40), boxstyle);
-			GUILayout.Label( p4Name + "\r\n" + p4.Score.ToString() );
+			GUILayout.BeginArea (new Rect (Screen.width - (GUIBoxWidth + 10), Screen.height - GUIBoxHeight, GUIBoxWidth, GUIBoxHeight), boxstyle);
+			GUILayout.Label( p4Name + "\r\n" + p4.Score.ToString(), rtext, null );
 			GUILayout.EndArea ();
 		}
 	}
