@@ -78,7 +78,7 @@ LightmapSettings:
 NavMeshSettings:
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    agentRadius: 1
+    agentRadius: .5
     agentHeight: 4
     agentSlope: 45
     agentClimb: .400000006
@@ -22058,7 +22058,7 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1672495102}
   m_Enabled: 1
-  m_Radius: .649999976
+  m_Radius: .75
   m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -22067,7 +22067,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 3
+  m_Height: 1.60000002
   m_BaseOffset: .899999976
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
