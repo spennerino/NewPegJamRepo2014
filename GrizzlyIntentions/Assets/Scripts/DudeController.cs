@@ -27,6 +27,7 @@ public class DudeController : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
+		Dead = false;
 		bloodSpray = transform.Find("BloodSpray").gameObject;
 		bloodSpray.particleSystem.Stop();
 	}

@@ -49,12 +49,15 @@
      <Compile Include="Assets\Scripts\AutoFade.cs" />
      <Compile Include="Assets\Scripts\BearChase.cs" />
      <Compile Include="Assets\Scripts\BearRoll.cs" />
+     <Compile Include="Assets\Scripts\ChangeShirt.cs" />
      <Compile Include="Assets\Scripts\DudeController.cs" />
      <Compile Include="Assets\Scripts\MenuController.cs" />
      <Compile Include="Assets\Scripts\PlayerGUI.cs" />
      <Compile Include="Assets\Scripts\PlayerUtil.cs" />
      <Compile Include="Assets\Scripts\Punch.cs" />
      <Compile Include="Assets\Scripts\Rotate.cs" />
+     <Compile Include="Assets\Scripts\UpdateWinningPlayer.cs" />
+     <Compile Include="Assets\Scripts\WinningPlayer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
