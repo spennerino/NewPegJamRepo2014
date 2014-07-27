@@ -418,6 +418,7 @@ GameObject:
   - 4: {fileID: 400048}
   - 95: {fileID: 9500000}
   - 65: {fileID: 6500000}
+  - 208: {fileID: 20800000}
   m_Layer: 0
   m_Name: treeagain
   m_TagString: Untagged
@@ -1423,6 +1424,17 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+--- !u!208 &20800000
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100048}
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 4
+  m_MoveThreshold: 0
+  m_Carve: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

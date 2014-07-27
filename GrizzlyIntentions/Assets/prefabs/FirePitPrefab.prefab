@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400010}
   - 95: {fileID: 9500000}
+  - 208: {fileID: 20800000}
   m_Layer: 0
   m_Name: FirePitPrefab
   m_TagString: Untagged
@@ -2441,6 +2442,17 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+--- !u!208 &20800000
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_Radius: 3.5
+  m_Height: 2
+  m_MoveThreshold: 0
+  m_Carve: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
