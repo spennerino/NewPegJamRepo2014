@@ -101,8 +101,13 @@ public class BearChase : MonoBehaviour
 			else
 			{
 				//push scores and winner to playerprefs
-                PlayerPrefs.SetString("LastWinner", "");
-				PlayerPrefs.SetInt("LastHighscore", lastManStanding.Score);
+				PlayerPrefs.SetInt("P1Score", lastManStanding.Score);
+				for(int i = 0; i < availableVictims.Count; i++)
+				{
+					DudeController playerController = availableVictims[i].GetComponent<DudeController>();
+					
+					PlayerPrefs.SetInt ("P" + (i+1).ToString() + "Score", playerController.Score);
+				}
 
 				//load win scene
 				AutoFade.LoadLevel("WinScene", 0.5f, 0.5f, Color.black);

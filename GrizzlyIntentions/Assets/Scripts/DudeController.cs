@@ -4,6 +4,7 @@ using System.Collections;
 public class DudeController : MonoBehaviour
 {
 	public bool Dead = false;
+	public string PublicName = "Unnamed Dude";
 
 	public int Score = 0;
 

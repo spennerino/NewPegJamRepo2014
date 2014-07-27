@@ -8,40 +8,49 @@ public class LeaderboardGUI : MonoBehaviour {
 	private int score;
 
 	private List<int> previousHighScores;
+	private List<int> newHighScores;
 	private int maxScores = 5;
 
 	void Start()
 	{
 		previousHighScores = new List<int>();
+		newHighScores = new List<int> ();
+
+		List<GameObject> players = PlayerUtil.GetPlayers ();
 
 		for(int i = 0; i < maxScores; i++)
 		{
 			int tmp = PlayerPrefs.GetInt("Highscore" + i.ToString());
 			previousHighScores.Add(tmp);
 		}
-		
-		bool isHighScore = false;
 
-		int lastManStandingScore = PlayerPrefs.GetInt ("LastHighscore");
-
-		for (int i = 0; i < maxScores; i++)
+		for(int i = 0; i < players.Count; i++)
 		{
-			if(lastManStandingScore > previousHighScores[i] && !isHighScore)
-			{
-				previousHighScores.Insert(i, lastManStandingScore);
-				isHighScore = true;
-			}
-		}
-		
-		if(isHighScore)
-		{
-			for (int i = 0; i < maxScores; i++)
-			{
-				PlayerPrefs.SetInt("Highscore" + i.ToString(), previousHighScores[i]);
-			}
-		}
+			DudeController dc = players[i].GetComponent<DudeController>();
 
-		PlayerPrefs.Save ();
+			int tmpScore = PlayerPrefs.GetInt ("P" + (i+1).ToString() + "Score", dc.Score);
+
+			bool isHighScore = false;
+
+			for (int j = 0; j < maxScores; j++)
+			{
+				if(tmpScore > previousHighScores[j] && !isHighScore)
+				{
+					previousHighScores.Insert(j, tmpScore);
+					isHighScore = true;
+				}
+			}
+			
+			if(isHighScore)
+			{
+				for (int j = 0; j < maxScores; j++)
+				{
+					PlayerPrefs.SetInt("Highscore" + j.ToString(), previousHighScores[j]);
+				}
+			}
+
+			PlayerPrefs.Save ();
+		}
 
 	}
 	
@@ -70,6 +79,13 @@ public class LeaderboardGUI : MonoBehaviour {
 			GUILayout.Label("", style, layoutParams);
 			GUILayout.Label(score.ToString(), style, layoutParams);
 			GUILayout.EndHorizontal();
+		}
+
+		GUILayout.Space (10);
+
+		if(GUILayout.Button("Restart Game"))
+		{
+			AutoFade.LoadLevel("MainScene", 0.5f, 0.5f, Color.black);
 		}
 
 		GUILayout.EndArea ();
