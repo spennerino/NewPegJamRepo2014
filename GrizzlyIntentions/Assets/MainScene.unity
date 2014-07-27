@@ -10837,7 +10837,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 9c8a97d52926e40099eee0c9f71c40c4, type: 2}
+  - {fileID: 2100000, guid: 55f036f3878ca3b429dbf12d3426abcf, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -24074,7 +24074,7 @@ Prefab:
     - target: {fileID: 2300016, guid: 09b94ceaeab454a21b9f6d70737142d9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9c8a97d52926e40099eee0c9f71c40c4, type: 2}
+      objectReference: {fileID: 2100000, guid: 55f036f3878ca3b429dbf12d3426abcf, type: 2}
     - target: {fileID: 2300010, guid: 09b94ceaeab454a21b9f6d70737142d9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
