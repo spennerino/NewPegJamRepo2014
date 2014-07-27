@@ -1012,7 +1012,7 @@ AudioSource:
   m_GameObject: {fileID: 100038}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 3d104573d1f587249870735ff8ff0d4e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d36c1400c42fe45d1a2f2349d6d75a14, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1094,9 +1094,9 @@ MonoBehaviour:
   TopSpeed: 1250
   SprintSpeed: 1000
   TopSprintSpeed: 3000
-  horizontalAxis: Horizontal - Player 1
-  verticalAxis: Vertical - Player 1
-  sprintButton: Sprint - Player 1
+  horizontalAxis: Horizontal - Keyboard
+  verticalAxis: Vertical - Keyboard
+  sprintButton: Sprint - Keyboard
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1108,7 +1108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270bd65ac79ed24409489a05ce1b93b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fire1Input: Fire1 - Player 1
+  punchInput: Punch - Keyboard
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
