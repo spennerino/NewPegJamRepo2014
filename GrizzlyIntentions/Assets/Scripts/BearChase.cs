@@ -16,6 +16,12 @@ public class BearChase : MonoBehaviour
 	private float timeToWin = 100;
 
 
+	private float currentBearSpeed =	0;
+	private float bearSpeedMulti =		1.1f;
+	private float bearSpeedStartTime = 	0;
+	private float bearSpeedInterval = 	15;
+
+
 	// Use this for initialization
 	void Start()
 	{
@@ -25,13 +31,28 @@ public class BearChase : MonoBehaviour
 
 		agent.updateRotation = true;
 		agent.updatePosition = true;
+
+		currentBearSpeed = agent.speed;
+		bearSpeedStartTime = Time.time;
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		float lastDistance = 0;
 
+		//increase bear speed every (bearSpeedInterval) seconds
+		if ((Time.time - bearSpeedStartTime) >= bearSpeedInterval)
+		{
+			currentBearSpeed *= bearSpeedMulti;
+
+			Debug.Log ("OH SHAIT I'M SPEEDING UP: now at " +currentBearSpeed.ToString());
+
+			bearSpeedStartTime = Time.time;
+		}
+
+
+		//find closest player to attack
+		float lastDistance = 0;
 		currentVictim = null;
 
 		foreach (GameObject player in availableVictims)
@@ -49,6 +70,7 @@ public class BearChase : MonoBehaviour
 				}
 			}
 		}
+
 
 		if (currentVictim != null)
 		{
