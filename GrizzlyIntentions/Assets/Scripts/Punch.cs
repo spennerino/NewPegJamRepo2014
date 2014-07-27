@@ -20,7 +20,8 @@ public class Punch : MonoBehaviour
 		}
 		foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Bear"))
 		{
-			gameObjects.Add(obj);
+			if (obj.rigidbody != null)
+				gameObjects.Add(obj);
 		}
 
 		punchEffect = transform.Find("PunchEffect").gameObject;
@@ -40,7 +41,7 @@ public class Punch : MonoBehaviour
 				Vector3 directionToTarget = transform.position - obj.transform.position;
 				float angle = Vector3.Angle(transform.forward, directionToTarget);
 				if (Mathf.Abs(angle) > 135
-					&& ((Vector3.Distance(transform.position, obj.transform.position) < 7 && obj.tag == "Bear"))
+					&& ((Vector3.Distance(transform.position, obj.transform.position) < 7.5 && obj.tag == "Bear"))
 					|| (Vector3.Distance(transform.position, obj.transform.position) < 4))
 				{
 					obj.transform.rigidbody.velocity = Vector3.zero;
