@@ -1120,6 +1120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dead: 0
+  PublicName: Unnamed Dude
   Score: 0
   Speed: 750
   TopSpeed: 1250
@@ -3261,7 +3262,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 3
+      scalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
