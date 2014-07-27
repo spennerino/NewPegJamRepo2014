@@ -5,6 +5,8 @@ public class DudeController : MonoBehaviour
 {
 	public bool Dead = false;
 
+	public ulong Score = 0;
+
 	public float Speed = 750;
 	public float TopSpeed = 1250;
 	public float SprintSpeed = 1500;
@@ -34,6 +36,8 @@ public class DudeController : MonoBehaviour
 	{
 		if (!Dead)
 		{
+			Score++;
+
 			float horizontal = Input.GetAxis(horizontalAxis);
 			float vertical = Input.GetAxis(verticalAxis);
 

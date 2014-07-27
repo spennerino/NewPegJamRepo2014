@@ -8,6 +8,8 @@ public class Punch : MonoBehaviour
 	private float punchRate = 1;
 	private float nextPunch = 0;
 
+	private int punchPointBonus = 5000;
+
 	private GameObject punchEffect;
 	private List<GameObject> gameObjects = new List<GameObject>();
 
@@ -46,6 +48,10 @@ public class Punch : MonoBehaviour
 				{
 					obj.transform.rigidbody.velocity = Vector3.zero;
 					obj.transform.rigidbody.AddForce(this.transform.forward * 1500);
+
+					DudeController myController = GetComponent<DudeController>();
+
+					myController.Score += (ulong)punchPointBonus;
 				}
 			}
 		}
