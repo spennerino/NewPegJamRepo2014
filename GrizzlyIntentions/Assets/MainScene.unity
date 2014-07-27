@@ -1509,7 +1509,7 @@ MonoBehaviour:
   Speed: 750
   TopSpeed: 1250
   SprintSpeed: 1000
-  AvailableSprint: 100
+  TopSprintSpeed: 3000
   horizontalAxis: Horizontal - Player 2
   verticalAxis: Vertical - Player 2
   sprintButton: Sprint - Player 1
@@ -2271,7 +2271,7 @@ GameObject:
   - 114: {fileID: 272456690}
   m_Layer: 0
   m_Name: Bear
-  m_TagString: Bear
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5481,7 +5481,7 @@ AudioSource:
   m_GameObject: {fileID: 418883073}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 2b460f375d062694ab9ae4181a04e0b9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ddeefffab5394694c908771ec5d829a1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -6080,7 +6080,7 @@ MonoBehaviour:
   Speed: 750
   TopSpeed: 1250
   SprintSpeed: 1000
-  AvailableSprint: 100
+  TopSprintSpeed: 3000
   horizontalAxis: Horizontal - Player 1
   verticalAxis: Vertical - Player 1
   sprintButton: Sprint - Player 1
@@ -7619,7 +7619,7 @@ MonoBehaviour:
   Speed: 750
   TopSpeed: 1250
   SprintSpeed: 1000
-  AvailableSprint: 100
+  TopSprintSpeed: 3000
   horizontalAxis: Horizontal - Player 3
   verticalAxis: Vertical - Player 3
   sprintButton: Sprint - Player 1
@@ -14975,7 +14975,7 @@ AudioSource:
   m_GameObject: {fileID: 1165170412}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 2b460f375d062694ab9ae4181a04e0b9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ddeefffab5394694c908771ec5d829a1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -19050,7 +19050,7 @@ AudioSource:
   m_GameObject: {fileID: 1359118646}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 2b460f375d062694ab9ae4181a04e0b9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ddeefffab5394694c908771ec5d829a1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -19438,7 +19438,7 @@ MonoBehaviour:
   Speed: 750
   TopSpeed: 1250
   SprintSpeed: 1000
-  AvailableSprint: 100
+  TopSprintSpeed: 3000
   horizontalAxis: Horizontal - Player 4
   verticalAxis: Vertical - Player 4
   sprintButton: Sprint - Player 1
@@ -21905,7 +21905,7 @@ GameObject:
   - 82: {fileID: 1672495109}
   m_Layer: 0
   m_Name: BearParent
-  m_TagString: Untagged
+  m_TagString: Bear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21944,7 +21944,7 @@ NavMeshAgent:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1672495102}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: .649999976
   m_Speed: 5
   m_Acceleration: 8
@@ -21964,7 +21964,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1672495102}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4cd28047c91d814094a5699d7d85a78, type: 3}
   m_Name: 
@@ -23357,7 +23357,7 @@ AudioSource:
   m_GameObject: {fileID: 1683618457}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 2b460f375d062694ab9ae4181a04e0b9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ddeefffab5394694c908771ec5d829a1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

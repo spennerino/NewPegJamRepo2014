@@ -5,15 +5,15 @@ public class DudeController : MonoBehaviour
 {
 	public bool Dead = false;
 
-	public float Speed = 			750;
-	public float TopSpeed = 		1250;
-	public float SprintSpeed =		1500;
-	public float TopSprintSpeed =	3000;
+	public float Speed = 750;
+	public float TopSpeed = 1250;
+	public float SprintSpeed = 1500;
+	public float TopSprintSpeed = 3000;
 
-	private bool isSprinting = 		false;
+	private bool isSprinting = false;
 	private float sprintStartTime = 0;
-	private float maxSprintTime = 	3;
-	private float sprintCooldown = 	30;
+	private float maxSprintTime = 3;
+	private float sprintCooldown = 30;
 	private float sprintCooldownStartTime = 0;
 
 	private GameObject bloodSpray;
@@ -41,18 +41,18 @@ public class DudeController : MonoBehaviour
 
 
 			//sprint button mapping
-			if(!System.String.IsNullOrEmpty(sprintButton))
+			if (!System.String.IsNullOrEmpty(sprintButton))
 			{
-				if(Input.GetButton (sprintButton))
+				if (Input.GetButton(sprintButton))
 				{
-					if(sprintStartTime == 0)
+					if (sprintStartTime == 0)
 					{
 						sprintStartTime = Time.time;
 					}
 
-					if((Time.time - sprintStartTime) <= maxSprintTime)
+					if ((Time.time - sprintStartTime) <= maxSprintTime)
 					{
-						Debug.Log ("I'M SPRINTING");
+						Debug.Log("I'M SPRINTING");
 						isSprinting = true;
 					}
 				}
@@ -60,19 +60,18 @@ public class DudeController : MonoBehaviour
 
 
 			//sprint cooldown - if sprint is exceeded, start cooldown
-			if((Time.time - sprintStartTime) >= maxSprintTime)
+			if ((Time.time - sprintStartTime) >= maxSprintTime)
 			{
-				Debug.Log ("CAN'T SPRINT");
 				isSprinting = false;
 
-				if(sprintCooldownStartTime == 0)
+				if (sprintCooldownStartTime == 0)
 				{
 					sprintCooldownStartTime = Time.time;
 				}
 
-				if((Time.time - sprintCooldownStartTime) > sprintCooldown)
+				if ((Time.time - sprintCooldownStartTime) > sprintCooldown)
 				{
-					Debug.Log ("I CAN SPRINT ONCE MORE");
+					Debug.Log("I CAN SPRINT ONCE MORE");
 					sprintStartTime = 0;
 					sprintCooldownStartTime = 0;
 				}
@@ -83,7 +82,7 @@ public class DudeController : MonoBehaviour
 			if (isSprinting)
 			{
 				rigidbody.AddForce(force.normalized * SprintSpeed * Time.deltaTime);
-				
+
 				if (rigidbody.velocity.magnitude > TopSprintSpeed)
 				{
 					rigidbody.velocity = rigidbody.velocity.normalized * TopSprintSpeed;

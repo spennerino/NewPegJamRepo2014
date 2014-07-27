@@ -1,16 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Punch : MonoBehaviour
 {
 	public string fire1Input;
-	private float punchRate = 2;
+	private float punchRate = 1;
 	private float nextPunch = 0;
 
 	private GameObject punchEffect;
+	private List<GameObject> gameObjects = new List<GameObject>();
 
 	void Start()
 	{
+		foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Player"))
+		{
+			if (this.gameObject != obj)
+				gameObjects.Add(obj);
+		}
+		foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Bear"))
+		{
+			gameObjects.Add(obj);
+		}
+
 		punchEffect = transform.Find("PunchEffect").gameObject;
 		punchEffect.particleSystem.Stop();
 	}
@@ -18,19 +30,21 @@ public class Punch : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		RaycastHit hit;
-		Ray frontCheck = new Ray(this.transform.position, this.transform.forward);
-
-		if (Input.GetButton(fire1Input) && Time.time > nextPunch)
+		if (Input.GetButtonDown(fire1Input) && Time.time > nextPunch)
 		{
 			punchEffect.particleSystem.Play();
 			nextPunch = Time.time + punchRate;
 
-			if (Physics.Raycast(frontCheck, out hit, 5))
+			foreach (GameObject obj in gameObjects)
 			{
-				if (hit.collider.tag == "Player" || hit.collider.tag == "Bear")
+				Vector3 directionToTarget = transform.position - obj.transform.position;
+				float angle = Vector3.Angle(transform.forward, directionToTarget);
+				if (Mathf.Abs(angle) > 135
+					&& ((Vector3.Distance(transform.position, obj.transform.position) < 8 && obj.tag == "Bear"))
+					|| (Vector3.Distance(transform.position, obj.transform.position) < 4))
 				{
-					hit.rigidbody.AddForce(this.transform.forward * 1000);
+					obj.transform.rigidbody.velocity = Vector3.zero;
+					obj.transform.rigidbody.AddForce(this.transform.forward * 1500);
 				}
 			}
 		}
