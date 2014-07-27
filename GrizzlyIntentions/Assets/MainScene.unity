@@ -1861,7 +1861,7 @@ NavMeshObstacle:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 176764830}
   m_Enabled: 1
-  m_Radius: 1.10000002
+  m_Radius: .899999976
   m_Height: 1.699646
   m_MoveThreshold: 0
   m_Carve: 0
@@ -2316,7 +2316,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 272456687}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -.150000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 659131891}
@@ -4220,7 +4220,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400010, guid: 8a6b275573e51e3449f3969fa275ecc0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6.06807041
+      value: -6.02947187
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 8a6b275573e51e3449f3969fa275ecc0, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4228,7 +4228,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 8a6b275573e51e3449f3969fa275ecc0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 19.7916145
+      value: 19.1966991
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 8a6b275573e51e3449f3969fa275ecc0, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4414,7 +4414,7 @@ NavMeshObstacle:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 417601082}
   m_Enabled: 1
-  m_Radius: 2.7232101
+  m_Radius: 2.5
   m_Height: 4.01045036
   m_MoveThreshold: 0
   m_Carve: 0
@@ -8838,7 +8838,7 @@ NavMeshObstacle:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 815447181}
   m_Enabled: 1
-  m_Radius: 1.10000002
+  m_Radius: .899999976
   m_Height: 1.699646
   m_MoveThreshold: 0
   m_Carve: 0
@@ -9328,7 +9328,7 @@ NavMeshObstacle:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 846221995}
   m_Enabled: 1
-  m_Radius: 1.10000002
+  m_Radius: .899999976
   m_Height: 1.699646
   m_MoveThreshold: 0
   m_Carve: 0
@@ -17725,7 +17725,7 @@ NavMeshObstacle:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1319077806}
   m_Enabled: 1
-  m_Radius: 2.7232101
+  m_Radius: 2.5
   m_Height: 4.01045036
   m_MoveThreshold: 0
   m_Carve: 0
@@ -21106,7 +21106,7 @@ Transform:
   m_PrefabInternal: {fileID: 381216979}
   m_GameObject: {fileID: 1568659129}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.06807041, y: 2.52132368, z: 19.7916145}
+  m_LocalPosition: {x: -6.02947187, y: 2.52132368, z: 19.1966991}
   m_LocalScale: {x: .895902991, y: .895903051, z: .895903051}
   m_Children:
   - {fileID: 2139502656}
@@ -21418,7 +21418,7 @@ NavMeshObstacle:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1578547125}
   m_Enabled: 1
-  m_Radius: 2.7232101
+  m_Radius: 2.5
   m_Height: 4.01045036
   m_MoveThreshold: 0
   m_Carve: 0
@@ -22030,7 +22030,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1672495102}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: -8}
+  m_LocalPosition: {x: 0, y: 5, z: -12.0660362}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 272456688}
@@ -25926,7 +25926,7 @@ NavMeshObstacle:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1868730201}
   m_Enabled: 1
-  m_Radius: 1.10000002
+  m_Radius: .899999976
   m_Height: 1.699646
   m_MoveThreshold: 0
   m_Carve: 0
