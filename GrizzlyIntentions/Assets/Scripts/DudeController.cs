@@ -14,8 +14,8 @@ public class DudeController : MonoBehaviour
 
 	private bool isSprinting = false;
 	private float sprintStartTime = 0;
-	private float maxSprintTime = 3;
-	private float sprintCooldown = 30;
+	private float maxSprintTime = 2;
+	private float sprintCooldown = 5;
 	private float sprintCooldownStartTime = 0;
 
 	private GameObject bloodSpray;
