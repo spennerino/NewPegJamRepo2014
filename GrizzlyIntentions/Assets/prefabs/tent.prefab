@@ -92,7 +92,7 @@ NavMeshObstacle:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
-  m_Radius: 4.4000001
+  m_Radius: 4.5999999
   m_Height: 10.5518932
   m_MoveThreshold: 0
   m_Carve: 0
