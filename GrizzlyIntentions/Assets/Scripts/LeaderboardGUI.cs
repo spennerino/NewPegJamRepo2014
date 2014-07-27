@@ -4,31 +4,32 @@ using System.Collections.Generic;
 
 public class LeaderboardGUI : MonoBehaviour {
 
-	private string name;
-	private int score;
-
 	private List<int> previousHighScores;
-	private List<int> newHighScores;
+	private List<string> previousHighScoreNames;
 	private int maxScores = 5;
 
 	void Start()
 	{
 		previousHighScores = new List<int>();
-		newHighScores = new List<int> ();
-
-		List<GameObject> players = PlayerUtil.GetPlayers ();
+		previousHighScoreNames = new List<string> ();
 
 		for(int i = 0; i < maxScores; i++)
 		{
-			int tmp = PlayerPrefs.GetInt("Highscore" + i.ToString());
-			previousHighScores.Add(tmp);
+			int tmpscore   = PlayerPrefs.GetInt("Highscore" + i.ToString());
+			string tmpname = PlayerPrefs.GetString ("HighscoreBy" + i.ToString());
+
+			previousHighScores.Add(tmpscore);
+			previousHighScoreNames.Add (tmpname);
 		}
 
-		for(int i = 0; i < players.Count; i++)
+		for(int i = 0; i < 4; i++)
 		{
-			DudeController dc = players[i].GetComponent<DudeController>();
+			int tmpScore =   PlayerPrefs.GetInt ("P" + (i+1).ToString() + "Score");
+			string tmpName = PlayerPrefs.GetString ("P" + (i+1).ToString() + "Name");
 
-			int tmpScore = PlayerPrefs.GetInt ("P" + (i+1).ToString() + "Score", dc.Score);
+
+			Debug.Log("P" + (i+1).ToString()  + "Score = " + tmpScore.ToString());
+
 
 			bool isHighScore = false;
 
@@ -37,6 +38,8 @@ public class LeaderboardGUI : MonoBehaviour {
 				if(tmpScore > previousHighScores[j] && !isHighScore)
 				{
 					previousHighScores.Insert(j, tmpScore);
+					previousHighScoreNames.Insert(j, tmpName);
+
 					isHighScore = true;
 				}
 			}
@@ -46,6 +49,7 @@ public class LeaderboardGUI : MonoBehaviour {
 				for (int j = 0; j < maxScores; j++)
 				{
 					PlayerPrefs.SetInt("Highscore" + j.ToString(), previousHighScores[j]);
+					PlayerPrefs.SetString("HighscoreBy" + j.ToString(), previousHighScoreNames[j]);
 				}
 			}
 
@@ -64,28 +68,35 @@ public class LeaderboardGUI : MonoBehaviour {
 		style.alignment = UnityEngine.TextAnchor.MiddleCenter;
 		style.normal.textColor = Color.white;
 
-		GUILayout.BeginArea (new Rect (Screen.width / 4, Screen.height - 150, colWidth * 2, 150));
+		GUILayout.BeginArea (new Rect (Screen.width / 4, Screen.height - 175, colWidth * 2, 175));
 
 		GUILayout.BeginHorizontal();
 		GUILayout.Label("Name", style, layoutParams );
 		GUILayout.Label("Scores", style, layoutParams );
 		GUILayout.EndHorizontal();
 
-		GUILayout.Space(25);
+		GUILayout.Space(10);
 
-		foreach(int score in previousHighScores)
+		for(int i = 0; i < maxScores; i++)
 		{
 			GUILayout.BeginHorizontal();
-			GUILayout.Label("", style, layoutParams);
-			GUILayout.Label(score.ToString(), style, layoutParams);
+			GUILayout.Label(previousHighScoreNames[i], style, layoutParams);
+			GUILayout.Label(previousHighScores[i].ToString(), style, layoutParams);
 			GUILayout.EndHorizontal();
 		}
 
-		GUILayout.Space (10);
+		GUILayout.Space (5);
 
 		if(GUILayout.Button("Restart Game"))
 		{
 			AutoFade.LoadLevel("MainScene", 0.5f, 0.5f, Color.black);
+		}
+
+		GUILayout.Space (5);
+
+		if(GUILayout.Button("End Game"))
+		{
+			Application.Quit ();
 		}
 
 		GUILayout.EndArea ();
