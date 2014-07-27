@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\DudeController.cs" />
      <Compile Include="Assets\Scripts\LeaderboardGUI.cs" />
      <Compile Include="Assets\Scripts\MenuController.cs" />
+     <Compile Include="Assets\Scripts\MenuGUI.cs" />
      <Compile Include="Assets\Scripts\PlayerGUI.cs" />
      <Compile Include="Assets\Scripts\PlayerUtil.cs" />
      <Compile Include="Assets\Scripts\Punch.cs" />
