@@ -14,8 +14,7 @@ public class BearChase : MonoBehaviour
 
 	private float winTimer = 0;
 	private float timeToWin = 100;
-
-
+	
 	private float currentBearSpeed =		0;
 	private float currentBearAccel =		0;
 	private float currentBearAngSpeed =		0;
@@ -24,7 +23,8 @@ public class BearChase : MonoBehaviour
 	private float bearSpeedMultiIncrease = 	0.25f;
 	private float bearSpeedStartTime = 		0;
 	private float bearSpeedInterval = 		15;
-
+	
+	private DudeController	lastManStanding =		null;
 
 	// Use this for initialization
 	void Start()
@@ -78,11 +78,14 @@ public class BearChase : MonoBehaviour
 
 				if (currentDistance < lastDistance || lastDistance == 0)
 				{
-					currentVictim = player.transform;
-					lastDistance = currentDistance;
+					currentVictim =		player.transform;
+					lastManStanding = 	player.GetComponent<DudeController>();
+					lastDistance = 		currentDistance;
 				}
 			}
 		}
+
+	
 
 
 		if (currentVictim != null)
@@ -92,9 +95,18 @@ public class BearChase : MonoBehaviour
 		else
 		{
 			if (winTimer < timeToWin)
+			{
 				winTimer++;
+			}
 			else
+			{
+				//push scores and winner to playerprefs
+                PlayerPrefs.SetString("LastWinner", "");
+				PlayerPrefs.SetInt("LastHighscore", lastManStanding.Score);
+
+				//load win scene
 				AutoFade.LoadLevel("WinScene", 0.5f, 0.5f, Color.black);
+			}
 		}
 
 		if (currentVictim != null && Vector3.Distance(currentVictim.position, transform.position) < 15 && Time.time > nextRoar)

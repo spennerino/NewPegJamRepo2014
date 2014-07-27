@@ -5,7 +5,7 @@ public class DudeController : MonoBehaviour
 {
 	public bool Dead = false;
 
-	public ulong Score = 0;
+	public int Score = 0;
 
 	public float Speed = 750;
 	public float TopSpeed = 1250;
@@ -27,6 +27,7 @@ public class DudeController : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
+		Dead = false;
 		bloodSpray = transform.Find("BloodSpray").gameObject;
 		bloodSpray.particleSystem.Stop();
 	}
