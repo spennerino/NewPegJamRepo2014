@@ -70,9 +70,9 @@ public class LeaderboardGUI : MonoBehaviour {
 
 		GUILayout.BeginArea (new Rect (Screen.width / 4, Screen.height - 175, colWidth * 2, 175));
 
+		
 		GUILayout.BeginHorizontal();
-		GUILayout.Label("Name", style, layoutParams );
-		GUILayout.Label("Scores", style, layoutParams );
+		GUILayout.Label("Leaderboard:", style, GUILayout.Width(colWidth * 2));
 		GUILayout.EndHorizontal();
 
 		GUILayout.Space(10);
