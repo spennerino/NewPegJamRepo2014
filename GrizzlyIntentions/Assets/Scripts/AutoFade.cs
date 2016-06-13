@@ -1,11 +1,12 @@
 ﻿// AutoFade.cs
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class AutoFade : MonoBehaviour
 {
 	private static AutoFade m_Instance = null;
-	private Material m_Material = null;
+	//private Material m_Material = null;
 	private string m_LevelName = "";
 	private int m_LevelIndex = 0;
 	private bool m_Fading = false;
@@ -30,13 +31,13 @@ public class AutoFade : MonoBehaviour
 	{
 		DontDestroyOnLoad(this);
 		m_Instance = this;
-		m_Material = new Material("Shader \"Plane/No zTest\" { SubShader { Pass { Blend SrcAlpha OneMinusSrcAlpha ZWrite Off Cull Off Fog { Mode Off } BindChannels { Bind \"Color\",color } } } }");
+		//m_Material = new Material("Shader \"Plane/No zTest\" { SubShader { Pass { Blend SrcAlpha OneMinusSrcAlpha ZWrite Off Cull Off Fog { Mode Off } BindChannels { Bind \"Color\",color } } } }");
 	}
 
 	private void DrawQuad(Color aColor, float aAlpha)
 	{
 		aColor.a = aAlpha;
-		m_Material.SetPass(0);
+		//m_Material.SetPass(0);
 		GL.Color(aColor);
 		GL.PushMatrix();
 		GL.LoadOrtho();
@@ -58,10 +59,12 @@ public class AutoFade : MonoBehaviour
 			t = Mathf.Clamp01(t + Time.deltaTime / aFadeOutTime);
 			DrawQuad(aColor, t);
 		}
-		if (m_LevelName != "")
-			Application.LoadLevel(m_LevelName);
+        if (m_LevelName != "")
+            SceneManager.LoadScene(m_LevelName);
+			//Application.LoadLevel(m_LevelName);
 		else
-			Application.LoadLevel(m_LevelIndex);
+            SceneManager.LoadScene(m_LevelIndex);
+            //Application.LoadLevel(m_LevelIndex);
 		while (t > 0.0f)
 		{
 			yield return new WaitForEndOfFrame();

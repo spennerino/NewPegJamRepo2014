@@ -22,7 +22,7 @@ public class PlayerGUI : MonoBehaviour {
 
 		currentPlayers = PlayerUtil.GetPlayers ();
 
-		Screen.showCursor = false;
+		Cursor.visible = false;
 	}
 
 

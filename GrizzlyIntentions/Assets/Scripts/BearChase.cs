@@ -115,7 +115,7 @@ public class BearChase : MonoBehaviour
 		if (currentVictim != null && Vector3.Distance(currentVictim.position, transform.position) < 15 && Time.time > nextRoar)
 		{
 			nextRoar = Time.time + roarRate;
-			audio.Play();
+			GetComponent<AudioSource>().Play();
 			Debug.Log("Roar");
 		}
 

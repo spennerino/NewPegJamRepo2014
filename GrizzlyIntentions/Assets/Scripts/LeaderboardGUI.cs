@@ -10,7 +10,7 @@ public class LeaderboardGUI : MonoBehaviour {
 
 	void Start()
 	{
-		Screen.showCursor = true;
+		Cursor.visible = true;
 
 		previousHighScores = new List<int>();
 		previousHighScoreNames = new List<string> ();

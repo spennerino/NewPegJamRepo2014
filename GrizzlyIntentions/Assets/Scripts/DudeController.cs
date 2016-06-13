@@ -31,10 +31,10 @@ public class DudeController : MonoBehaviour
 	{
 		Dead = false;
 		bloodSpray = transform.Find("BloodSpray").gameObject;
-		bloodSpray.particleSystem.Stop();
+		bloodSpray.GetComponent<ParticleSystem>().Stop();
 
 		sprintEffect = transform.Find("SprintEffect").gameObject;
-		sprintEffect.particleSystem.Stop();
+		sprintEffect.GetComponent<ParticleSystem>().Stop();
 	}
 
 	// Update is called once per frame
@@ -64,7 +64,7 @@ public class DudeController : MonoBehaviour
 					{
 						Debug.Log("I'M SPRINTING");
 						isSprinting = true;
-						sprintEffect.particleSystem.Play();
+						sprintEffect.GetComponent<ParticleSystem>().Play();
 					}
 				}
 			}
@@ -92,33 +92,33 @@ public class DudeController : MonoBehaviour
 			//apply movement force
 			if (isSprinting)
 			{
-				rigidbody.AddForce(force.normalized * SprintSpeed * Time.deltaTime);
+				GetComponent<Rigidbody>().AddForce(force.normalized * SprintSpeed * Time.deltaTime);
 
-				if (rigidbody.velocity.magnitude > TopSprintSpeed)
+				if (GetComponent<Rigidbody>().velocity.magnitude > TopSprintSpeed)
 				{
-					rigidbody.velocity = rigidbody.velocity.normalized * TopSprintSpeed;
+					GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity.normalized * TopSprintSpeed;
 				}
 			}
 			else
 			{
-				rigidbody.AddForce(force.normalized * Speed * Time.deltaTime);
+				GetComponent<Rigidbody>().AddForce(force.normalized * Speed * Time.deltaTime);
 
-				if (rigidbody.velocity.magnitude > TopSpeed)
+				if (GetComponent<Rigidbody>().velocity.magnitude > TopSpeed)
 				{
-					rigidbody.velocity = rigidbody.velocity.normalized * TopSpeed;
+					GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity.normalized * TopSpeed;
 				}
 			}
 
 
 			GameObject obj = transform.Find("thehuman").gameObject;
-			if (rigidbody.velocity.magnitude > 0.1)
+			if (GetComponent<Rigidbody>().velocity.magnitude > 0.1)
 			{
-				transform.forward = Vector3.Normalize(new Vector3(rigidbody.velocity.x, 0f, rigidbody.velocity.z));
-				obj.animation.Play("Run");
+				transform.forward = Vector3.Normalize(new Vector3(GetComponent<Rigidbody>().velocity.x, 0f, GetComponent<Rigidbody>().velocity.z));
+				obj.GetComponent<Animation>().Play("Run");
 			}
 			else
 			{
-				obj.animation.Stop();
+				obj.GetComponent<Animation>().Stop();
 			}
 		}
 	}
@@ -129,15 +129,15 @@ public class DudeController : MonoBehaviour
 		{
 			if (contact.otherCollider.tag == "Bear")
 			{
-				rigidbody.AddForce(new Vector3(Random.Range(-1000, 1000), 2000, Random.Range(-1000, 1000)));
+				GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-1000, 1000), 2000, Random.Range(-1000, 1000)));
 
 				Dead = true;
 
 				GameObject human = transform.Find("thehuman").gameObject;
-				human.animation.Play("Die");
-				bloodSpray.particleSystem.Play();
-				bloodSpray.audio.Play();
-				audio.Play();
+				human.GetComponent<Animation>().Play("Die");
+				bloodSpray.GetComponent<ParticleSystem>().Play();
+				bloodSpray.GetComponent<AudioSource>().Play();
+				GetComponent<AudioSource>().Play();
 			}
 		}
 	}

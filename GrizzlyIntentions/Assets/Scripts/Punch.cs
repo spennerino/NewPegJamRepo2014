@@ -22,12 +22,12 @@ public class Punch : MonoBehaviour
 		}
 		foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Bear"))
 		{
-			if (obj.rigidbody != null)
+			if (obj.GetComponent<Rigidbody>() != null)
 				gameObjects.Add(obj);
 		}
 
 		punchEffect = this.transform.Find("PunchEffect").gameObject;
-		punchEffect.particleSystem.Stop();
+		punchEffect.GetComponent<ParticleSystem>().Stop();
 	}
 
 	// Update is called once per frame
@@ -35,8 +35,8 @@ public class Punch : MonoBehaviour
 	{
 		if (Input.GetButtonDown(punchInput) && Time.time > nextPunch)
 		{
-			punchEffect.particleSystem.Play();
-			punchEffect.audio.Play();
+			punchEffect.GetComponent<ParticleSystem>().Play();
+			punchEffect.GetComponent<AudioSource>().Play();
 			nextPunch = Time.time + punchRate;
 
 			foreach (GameObject obj in gameObjects)
@@ -47,8 +47,8 @@ public class Punch : MonoBehaviour
 					&& ((Vector3.Distance(this.transform.position, obj.transform.position) < 7.5 && obj.tag == "Bear"))
 					|| (Vector3.Distance(this.transform.position, obj.transform.position) < 4))
 				{
-					obj.transform.rigidbody.velocity = Vector3.zero;
-					obj.transform.rigidbody.AddForce(this.transform.forward * 1500);
+					obj.transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
+					obj.transform.GetComponent<Rigidbody>().AddForce(this.transform.forward * 1500);
 
 					DudeController myController = GetComponent<DudeController>();
 

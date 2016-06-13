@@ -12,7 +12,7 @@ public static class WinningPlayer
 		Debug.Log(lastPlayer);
 
 		Renderer lastRenderer = player.transform.Find("thehuman/torso_geo/polySurface2").gameObject.GetComponent<Renderer>();
-		material = lastRenderer.renderer.material.name;
+		material = lastRenderer.GetComponent<Renderer>().material.name;
 		material = material.Substring(0, material.Length - 11);
 	}
 }
